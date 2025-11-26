@@ -17,10 +17,11 @@ interface ProductLayoutProps {
   technology: string;
   images: string[];
   features?: string[];
+  certifications?: string[];
   children?: ReactNode;
 }
 
-const ProductLayout = ({ title, description, technology, images, features }: ProductLayoutProps) => {
+const ProductLayout = ({ title, description, technology, images, features, certifications }: ProductLayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col bg-muted/30">
       <Navigation />
@@ -81,6 +82,21 @@ const ProductLayout = ({ title, description, technology, images, features }: Pro
                   {technology}
                 </p>
               </div>
+
+              {/* Certifications Section */}
+              {certifications && certifications.length > 0 && (
+                <div className="bg-background p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg">
+                  <h2 className="text-3xl font-bold mb-6 text-foreground">Certifikáty a normy</h2>
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {certifications.map((cert, index) => (
+                      <li key={index} className="flex items-start gap-3 p-4 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
+                        <span className="text-primary text-xl mt-0.5">✓</span>
+                        <span className="text-muted-foreground">{cert}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               {/* Gallery */}
               {images.length > 1 && (

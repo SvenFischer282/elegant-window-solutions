@@ -12,6 +12,15 @@ const GarageSystems = () => {
     "Automatické ovládanie"
   ];
   
+  const certifications = [
+    "STN EN 13241-1 - Garážové brány - Norma výrobku",
+    "CE certifikát - Zhoda s európskymi normami",
+    "Bezpečnostné snímače - Ochrana osôb",
+    "Automatika s nouzovým odblokovaním",
+    "Tepelná izolácia až 1.0 W/m²K",
+    "Veterná odolnosť trieda 3"
+  ];
+  
   const images = [
     "https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=1200&q=80",
     "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
@@ -25,6 +34,7 @@ const GarageSystems = () => {
       technology={technology}
       images={images}
       features={features}
+      certifications={certifications}
     />
   );
 };

@@ -12,6 +12,15 @@ const Facades = () => {
     "Atypické riešenia"
   ];
   
+  const certifications = [
+    "STN EN 13830 - Fasádne systémy - Norma výrobku",
+    "CE certifikát - Zhoda s európskymi normami",
+    "Tepelná izolácia Uf od 0.8 W/m²K",
+    "Veterná odolnosť do triedy E",
+    "Protipožiarna ochrana EI 30-90",
+    "Akustická izolácia až 48 dB"
+  ];
+  
   const images = [
     "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
     "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80",
@@ -25,6 +34,7 @@ const Facades = () => {
       technology={technology}
       images={images}
       features={features}
+      certifications={certifications}
     />
   );
 };

@@ -12,6 +12,15 @@ const AdditionalElements = () => {
     "Kovanie a príslušenstvo"
   ];
   
+  const certifications = [
+    "CE certifikát - Zhoda s európskymi normami",
+    "ISO 9001 - Systém manažérstva kvality",
+    "STN EN 13659 - Vonkajšie žalúzie",
+    "Certifikované tesnenia EPDM",
+    "Korózia odolnosť RAL certifikovaná",
+    "Záručná doba až 10 rokov"
+  ];
+  
   const images = [
     "https://images.unsplash.com/photo-1615876234886-fd9a39fda97f?auto=format&fit=crop&w=1200&q=80",
     "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
@@ -25,6 +34,7 @@ const AdditionalElements = () => {
       technology={technology}
       images={images}
       features={features}
+      certifications={certifications}
     />
   );
 };

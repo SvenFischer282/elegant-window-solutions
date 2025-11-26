@@ -12,6 +12,15 @@ const Doors = () => {
     "Protipožiarne dvere"
   ];
   
+  const certifications = [
+    "STN EN 14351-1 - Dvere - Norma výrobku",
+    "CE certifikát - Zhoda s európskymi normami",
+    "Bezpečnostná trieda RC2/RC3 - Ochrana proti vlámaniu",
+    "STN EN 1627 - Odolnosť proti násilnému vniknutiu",
+    "STN 92 0201 - Protipožiarna ochrana",
+    "Akustická izolácia až 42 dB"
+  ];
+  
   const images = [
     "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=1200&q=80",
     "https://images.unsplash.com/photo-1534237710431-e2fc698436d0?auto=format&fit=crop&w=800&q=80",
@@ -25,6 +34,7 @@ const Doors = () => {
       technology={technology}
       images={images}
       features={features}
+      certifications={certifications}
     />
   );
 };

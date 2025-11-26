@@ -12,6 +12,15 @@ const Windows = () => {
     "Energeticky úsporné okná"
   ];
   
+  const certifications = [
+    "STN EN 14351-1 - Okná a dvere - Norma výrobku",
+    "CE certifikát - Zhoda s európskymi normami",
+    "Energetická trieda A+ - Vysoká energetická účinnosť",
+    "ISO 9001 - Systém manažérstva kvality",
+    "STN 73 0540 - Tepelná ochrana budov",
+    "RAL certifikát - Garancia kvality montáže"
+  ];
+  
   const images = [
     "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
     "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80",
@@ -25,6 +34,7 @@ const Windows = () => {
       technology={technology}
       images={images}
       features={features}
+      certifications={certifications}
     />
   );
 };
