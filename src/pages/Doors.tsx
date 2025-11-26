@@ -13,12 +13,12 @@ const Doors = () => {
   ];
   
   const certifications = [
-    "STN EN 14351-1 - Dvere - Norma výrobku",
-    "CE certifikát - Zhoda s európskymi normami",
-    "Bezpečnostná trieda RC2/RC3 - Ochrana proti vlámaniu",
-    "STN EN 1627 - Odolnosť proti násilnému vniknutiu",
-    "STN 92 0201 - Protipožiarna ochrana",
-    "Akustická izolácia až 42 dB"
+    { name: "STN EN 14351-1 - Dvere - Norma výrobku", pdfUrl: "/certificates/doors-stn-en-14351-1.pdf" },
+    { name: "CE certifikát - Zhoda s európskymi normami", pdfUrl: "/certificates/doors-ce-certificate.pdf" },
+    { name: "Bezpečnostná trieda RC2/RC3 - Ochrana proti vlámaniu", pdfUrl: "/certificates/security-rc2-rc3.pdf" },
+    { name: "STN EN 1627 - Odolnosť proti násilnému vniknutiu", pdfUrl: "/certificates/stn-en-1627.pdf" },
+    { name: "STN 92 0201 - Protipožiarna ochrana", pdfUrl: "/certificates/fire-protection.pdf" },
+    { name: "Akustická izolácia až 42 dB", pdfUrl: "/certificates/acoustic-insulation.pdf" }
   ];
   
   const images = [

@@ -13,12 +13,12 @@ const Aluminum = () => {
   ];
   
   const certifications = [
-    "STN EN 13830 - Vonkajšie steny - Norma výrobku",
-    "CE certifikát - Zhoda s európskymi normami",
-    "ISO 9001:2015 - Systém manažérstva kvality",
-    "Veterná záťaž do 2.5 kN/m²",
-    "Povrchová úprava RAL certifikovaná",
-    "Korózia odolnosť C5-M - Vysoká ochrana"
+    { name: "STN EN 13830 - Vonkajšie steny - Norma výrobku", pdfUrl: "/certificates/aluminum-stn-en-13830.pdf" },
+    { name: "CE certifikát - Zhoda s európskymi normami", pdfUrl: "/certificates/aluminum-ce-certificate.pdf" },
+    { name: "ISO 9001:2015 - Systém manažérstva kvality", pdfUrl: "/certificates/iso-9001-2015.pdf" },
+    { name: "Veterná záťaž do 2.5 kN/m²", pdfUrl: "/certificates/wind-load.pdf" },
+    { name: "Povrchová úprava RAL certifikovaná", pdfUrl: "/certificates/ral-surface.pdf" },
+    { name: "Korózia odolnosť C5-M - Vysoká ochrana", pdfUrl: "/certificates/corrosion-resistance.pdf" }
   ];
   
   const images = [
