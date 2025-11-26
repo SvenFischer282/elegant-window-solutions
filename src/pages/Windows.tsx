@@ -13,12 +13,12 @@ const Windows = () => {
   ];
   
   const certifications = [
-    "STN EN 14351-1 - Okná a dvere - Norma výrobku",
-    "CE certifikát - Zhoda s európskymi normami",
-    "Energetická trieda A+ - Vysoká energetická účinnosť",
-    "ISO 9001 - Systém manažérstva kvality",
-    "STN 73 0540 - Tepelná ochrana budov",
-    "RAL certifikát - Garancia kvality montáže"
+    { name: "STN EN 14351-1 - Okná a dvere - Norma výrobku", pdfUrl: "/certificates/stn-en-14351-1.pdf" },
+    { name: "CE certifikát - Zhoda s európskymi normami", pdfUrl: "/certificates/ce-certificate.pdf" },
+    { name: "Energetická trieda A+ - Vysoká energetická účinnosť", pdfUrl: "/certificates/energy-class-a.pdf" },
+    { name: "ISO 9001 - Systém manažérstva kvality", pdfUrl: "/certificates/iso-9001.pdf" },
+    { name: "STN 73 0540 - Tepelná ochrana budov", pdfUrl: "/certificates/stn-73-0540.pdf" },
+    { name: "RAL certifikát - Garancia kvality montáže", pdfUrl: "/certificates/ral-certificate.pdf" }
   ];
   
   const images = [

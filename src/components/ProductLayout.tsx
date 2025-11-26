@@ -10,6 +10,13 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
+
+interface Certification {
+  name: string;
+  pdfUrl: string;
+}
 
 interface ProductLayoutProps {
   title: string;
@@ -17,7 +24,7 @@ interface ProductLayoutProps {
   technology: string;
   images: string[];
   features?: string[];
-  certifications?: string[];
+  certifications?: Certification[];
   children?: ReactNode;
 }
 
@@ -87,14 +94,27 @@ const ProductLayout = ({ title, description, technology, images, features, certi
               {certifications && certifications.length > 0 && (
                 <div className="bg-background p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg">
                   <h2 className="text-3xl font-bold mb-6 text-foreground">Certifikáty a normy</h2>
-                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 gap-4">
                     {certifications.map((cert, index) => (
-                      <li key={index} className="flex items-start gap-3 p-4 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
-                        <span className="text-primary text-xl mt-0.5">✓</span>
-                        <span className="text-muted-foreground">{cert}</span>
-                      </li>
+                      <div key={index} className="flex items-center justify-between gap-4 p-4 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
+                        <div className="flex items-start gap-3 flex-1">
+                          <span className="text-primary text-xl mt-0.5">✓</span>
+                          <span className="text-muted-foreground">{cert.name}</span>
+                        </div>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          asChild
+                          className="shrink-0"
+                        >
+                          <a href={cert.pdfUrl} download target="_blank" rel="noopener noreferrer">
+                            <Download className="w-4 h-4 mr-2" />
+                            Stiahnuť PDF
+                          </a>
+                        </Button>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               )}
 

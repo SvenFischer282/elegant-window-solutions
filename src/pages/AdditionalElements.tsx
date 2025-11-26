@@ -13,12 +13,12 @@ const AdditionalElements = () => {
   ];
   
   const certifications = [
-    "CE certifikát - Zhoda s európskymi normami",
-    "ISO 9001 - Systém manažérstva kvality",
-    "STN EN 13659 - Vonkajšie žalúzie",
-    "Certifikované tesnenia EPDM",
-    "Korózia odolnosť RAL certifikovaná",
-    "Záručná doba až 10 rokov"
+    { name: "CE certifikát - Zhoda s európskymi normami", pdfUrl: "/certificates/additional-ce-certificate.pdf" },
+    { name: "ISO 9001 - Systém manažérstva kvality", pdfUrl: "/certificates/additional-iso-9001.pdf" },
+    { name: "STN EN 13659 - Vonkajšie žalúzie", pdfUrl: "/certificates/stn-en-13659.pdf" },
+    { name: "Certifikované tesnenia EPDM", pdfUrl: "/certificates/epdm-seals.pdf" },
+    { name: "Korózia odolnosť RAL certifikovaná", pdfUrl: "/certificates/additional-ral.pdf" },
+    { name: "Záručná doba až 10 rokov", pdfUrl: "/certificates/warranty-10-years.pdf" }
   ];
   
   const images = [

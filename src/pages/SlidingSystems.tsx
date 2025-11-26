@@ -13,12 +13,12 @@ const SlidingSystems = () => {
   ];
   
   const certifications = [
-    "STN EN 14351-1 - Posuvné systémy - Norma výrobku",
-    "CE certifikát - Zhoda s európskymi normami",
-    "Veterná odolnosť trieda C5 - Vysoká odolnosť",
-    "Vodotesnosť trieda E1500 - Maximálna ochrana",
-    "Tepelná izolácia Uf až 1.3 W/m²K",
-    "Záťažový test 50 000 cyklov"
+    { name: "STN EN 14351-1 - Posuvné systémy - Norma výrobku", pdfUrl: "/certificates/sliding-stn-en-14351-1.pdf" },
+    { name: "CE certifikát - Zhoda s európskymi normami", pdfUrl: "/certificates/sliding-ce-certificate.pdf" },
+    { name: "Veterná odolnosť trieda C5 - Vysoká odolnosť", pdfUrl: "/certificates/wind-resistance-c5.pdf" },
+    { name: "Vodotesnosť trieda E1500 - Maximálna ochrana", pdfUrl: "/certificates/water-resistance-e1500.pdf" },
+    { name: "Tepelná izolácia Uf až 1.3 W/m²K", pdfUrl: "/certificates/thermal-insulation.pdf" },
+    { name: "Záťažový test 50 000 cyklov", pdfUrl: "/certificates/load-test.pdf" }
   ];
   
   const images = [
