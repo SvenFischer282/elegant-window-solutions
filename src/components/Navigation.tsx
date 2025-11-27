@@ -65,6 +65,13 @@ const Navigation = () => {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
+
+            <Link
+              to="/contact"
+              className="px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-hover transition-colors"
+            >
+              Kontakt
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -101,6 +108,13 @@ const Navigation = () => {
                 {product.label}
               </Link>
             ))}
+            <Link
+              to="/contact"
+              className="block px-4 py-2 text-sm font-medium hover:bg-primary-hover rounded-md transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Kontakt
+            </Link>
           </div>
         )}
       </div>
