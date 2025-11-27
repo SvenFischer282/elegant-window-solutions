@@ -2,8 +2,9 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
+import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ChevronRight, RectangleHorizontal, DoorOpen, ArrowRightLeft, Box, Building2, Warehouse, Plus } from "lucide-react";
+import { ChevronRight, RectangleHorizontal, DoorOpen, ArrowRightLeft, Box, Building2, Warehouse, Plus, MapPin, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-windows.jpg";
 
@@ -16,6 +17,41 @@ const Index = () => {
     { title: "Fasády", icon: Building2, path: "/facades" },
     { title: "Garážové brány a žalúzie", icon: Warehouse, path: "/garage-systems" },
     { title: "Doplnkové prvky", icon: Plus, path: "/additional-elements" },
+  ];
+
+  const projects = [
+    {
+      title: "Rodinný dom - Bratislava",
+      description: "Kompletná výmena okien a dverí v rodinnom dome",
+      location: "Bratislava",
+      date: "2024",
+      category: "Okná a dvere",
+      image: heroImage,
+    },
+    {
+      title: "Administratívna budova",
+      description: "Hliníková fasáda a posuvné systémy pre kancelárske priestory",
+      location: "Žilina",
+      date: "2024",
+      category: "Fasády",
+      image: heroImage,
+    },
+    {
+      title: "Bytový komplex",
+      description: "Montáž plastových okien v novostavbe bytového domu",
+      location: "Košice",
+      date: "2023",
+      category: "Okná",
+      image: heroImage,
+    },
+    {
+      title: "Rekonštrukcia vily",
+      description: "Luxusné hliníkové okná a posuvné dvere",
+      location: "Banská Bystrica",
+      date: "2023",
+      category: "Hliník",
+      image: heroImage,
+    },
   ];
 
   return (
@@ -72,6 +108,53 @@ const Index = () => {
                 icon={product.icon}
                 path={product.path}
               />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* References Section */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 text-gradient">Naše referencie</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Pozrite si naše realizované projekty a presvedčte sa o kvalite našej práce
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {projects.map((project, index) => (
+              <Card key={index} className="overflow-hidden hover-scale group cursor-pointer">
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                    <div className="text-xs font-semibold mb-1 text-primary-foreground/80">
+                      {project.category}
+                    </div>
+                    <h3 className="text-lg font-bold mb-2">{project.title}</h3>
+                  </div>
+                </div>
+                <CardContent className="p-4">
+                  <p className="text-sm text-muted-foreground mb-3">
+                    {project.description}
+                  </p>
+                  <div className="flex items-center justify-between text-xs text-muted-foreground">
+                    <div className="flex items-center">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      {project.location}
+                    </div>
+                    <div className="flex items-center">
+                      <Calendar className="w-3 h-3 mr-1" />
+                      {project.date}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
