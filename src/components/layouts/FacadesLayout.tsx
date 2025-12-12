@@ -87,11 +87,14 @@ const FacadesLayout = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 space-y-8">
               <ProductHero image={images[0]} alt={title} />
-              <ProductDescription
-                title={title}
-                description={description}
-                features={features}
-              />
+              <div className="space-y-6">
+                <h1 className="text-4xl md:text-5xl font-bold text-foreground">
+                  {title}
+                </h1>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  {description}
+                </p>
+              </div>
               <TechnologyGrid technologies={technologies} />
 
               <ProductGallery images={images} title={title} />

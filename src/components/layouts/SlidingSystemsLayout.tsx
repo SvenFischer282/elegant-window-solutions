@@ -190,7 +190,7 @@ const SlidingSystemsLayout = () => {
               </div>
               <TechnologyGrid technologies={technologies} />
 
-              <ProductGallery images={images} title={title} />
+              
             </div>
 
             <div className="lg:col-span-1">

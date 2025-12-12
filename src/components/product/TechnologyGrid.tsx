@@ -1,5 +1,3 @@
-import { StringifyOptions } from "querystring";
-
 interface TechnologyItem {
   name: string;
   description: string;
