@@ -13,12 +13,12 @@ const ProductGallery = ({ images, title }: ProductGalleryProps) => {
         {images.slice(1).map((image, index) => (
           <div
             key={index}
-            className="aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
+            className="rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
           >
             <img
               src={image}
               alt={`${title} ${index + 2}`}
-              className="w-full h-full object-cover"
+              className="w-full h-[400px] object-cover"
             />
           </div>
         ))}
