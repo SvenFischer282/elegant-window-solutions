@@ -18,11 +18,11 @@ const TechnologyGrid = ({ technologies }: TechnologyGridProps) => {
             key={index} 
             className="bg-background rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-300 text-center"
           >
-            <div className="aspect-square mb-4 flex items-center justify-center">
+            <div className="mb-4 flex items-center justify-center h-48">
               <img
                 src={tech.image}
                 alt={tech.name}
-                className="max-h-32 object-contain"
+                className="max-h-44 object-contain"
               />
             </div>
             <h4 className="font-bold text-foreground text-sm md:text-base">{tech.name}</h4>

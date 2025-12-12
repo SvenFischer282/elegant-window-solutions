@@ -9,7 +9,7 @@ const ProductHero = ({ image, alt }: ProductHeroProps) => {
       <img
         src={image}
         alt={alt}
-        className="w-full h-[600px] object-cover"
+        className="w-full h-[70vh] min-h-[500px] max-h-[800px] object-cover"
       />
     </div>
   );
