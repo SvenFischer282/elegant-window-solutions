@@ -3,13 +3,36 @@ import ProductLayout from "@/components/ProductLayout";
 const Aluminum = () => {
   const description = "Ľahké hliníkové konštrukcie – optimálny variant, ak potrebujete zabezpečiť maximálne prirodzené osvetlenie a nie sú prísne požiadavky na tepelnú izoláciu. Hliníkové konštrukcie sa vyznačujú vysokou odolnosťou proti korózii, sú dlhovekové a praktické.";
   
-  const technology = "Využívame moderné hliníkové profily s najnovšími technológiami. Naše hliníkové systémy zabezpečujú vysokú pevnosť konštrukcie pri minimálnej hmotnosti. Profesionálne spracovanie povrchu zaručuje dlhodobú ochranu proti poveternostným vplyvom a korózii. Všetky konštrukcie prechádzajú prísnou kontrolou kvality.";
+  const technology = "Využívame moderné hliníkové profily s najnovšími technológiami.";
   
   const features = [
     "Fasády",
     "Kancelárske priečky",
     "Okná",
     "Dvere a ďalšie výrobky z hliníka"
+  ];
+
+  const technologies = [
+    {
+      name: "Hliníkové okná",
+      description: "Úzke profily | Maximálne svetlo",
+      image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Hliníkové dvere",
+      description: "Vysoká bezpečnosť | Elegantný dizajn",
+      image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Kancelárske priečky",
+      description: "Flexibilné riešenia | Moderný vzhľad",
+      image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Zimné záhrady",
+      description: "Celoročné využitie | Tepelná izolácia",
+      image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=400&q=80"
+    }
   ];
   
   const certifications = [
@@ -52,6 +75,7 @@ const Aluminum = () => {
       technology={technology}
       images={images}
       features={features}
+      technologies={technologies}
       certifications={certifications}
       downloadableDocuments={downloadableDocuments}
     />

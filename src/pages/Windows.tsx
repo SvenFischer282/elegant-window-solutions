@@ -1,15 +1,49 @@
 import ProductLayout from "@/components/ProductLayout";
+import heroImage from "@/assets/hero-windows.jpg";
 
 const Windows = () => {
-  const description = "Moderné plastové okná sú jedným z najobľúbenejších typov okenných konštrukcií, ktoré sa vyberajú pre zasklenie kancelárií, bytových a výrobných priestorov. Takéto okná sa vyznačujú vysokou odolnosťou proti korózii, sú dlhovekové a praktické.";
+  const description = "Plastové okná majú veľký dopyt vďaka svojmu atraktívnemu dizajnu a praktickosti. Nevyžadujú natieranie, majú veľmi estetický a pekný vzhľad. Spolupracujeme s výrobcami kvalitných profilových systémov, ktorých produkcia prechádza kontrolou kvality na všetkých etapách výroby.";
   
-  const technology = "Používame kvalitné viackomôrkové profily s vynikajúcimi izolačnými vlastnosťami. Naše okná sú vybavené moderným zasklením s nízkou emisivitou pre maximálnu energetickú úsporu. Profesionálna montáž a tesniace systémy zabezpečujú dokonalú tepelnú a zvukovú izoláciu.";
+  const technology = "Používame kvalitné viackomôrkové profily s vynikajúcimi izolačnými vlastnosťami. Naše okná sú vybavené moderným zasklením s nízkou emisivitou pre maximálnu energetickú úsporu.";
   
   const features = [
     "Plastové okná",
-    "Drevené okná",
+    "Drevené okná", 
     "Hliníkové okná",
     "Energeticky úsporné okná"
+  ];
+
+  const technologies = [
+    {
+      name: "5-komorový systém",
+      description: "60 mm | Klasické okná s optimálnou komfortnou výbavou",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "6-komorový systém",
+      description: "70 mm | Vyššia tepelná izolácia a úspora energie",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "7-komorový systém",
+      description: "76 mm | Prémiová tepelná a zvuková izolácia",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "8-komorový systém",
+      description: "82 mm | Najvyššia energetická účinnosť",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Panoramatický systém",
+      description: "76 mm | Maximálne presvetlenie interiéru",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Pasívny dom",
+      description: "90 mm | Pre pasívne a nízkoenergetické domy",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=400&q=80"
+    }
   ];
   
   const certifications = [
@@ -40,7 +74,7 @@ const Windows = () => {
   ];
   
   const images = [
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    heroImage,
     "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80",
     "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
   ];
@@ -52,6 +86,7 @@ const Windows = () => {
       technology={technology}
       images={images}
       features={features}
+      technologies={technologies}
       certifications={certifications}
       downloadableDocuments={downloadableDocuments}
     />

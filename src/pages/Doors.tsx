@@ -1,15 +1,38 @@
 import ProductLayout from "@/components/ProductLayout";
 
 const Doors = () => {
-  const description = "Kvalitné vstupné a interiérové dvere, ktoré spájajú funkčnosť, bezpečnosť a estetiku. Ponúkame široký výber dverí pre rôzne typy objektov - od rodinných domov až po komerčné priestory.";
+  const description = "Kvalitné vstupné a interiérové dvere, ktoré spájajú funkčnosť, bezpečnosť a estetiku. Ponúkame široký výber dverí pre rôzne typy objektov - od rodinných domov až po komerčné priestory. Naše dvere nevyžadujú špeciálnu údržbu a zachovávajú si dlhodobo estetický vzhľad.";
   
-  const technology = "Moderné dverové systémy s vysokou bezpečnosťou a tepelnou izoláciou. Používame kvalitné materiály a kovanie od preverených výrobcov. Každé dvere sú vybavené moderným zámkovým systémom a presnými tesnieniami pre maximálnu ochranu proti poveternostným vplyvom.";
+  const technology = "Moderné dverové systémy s vysokou bezpečnosťou a tepelnou izoláciou.";
   
   const features = [
     "Vstupné dvere",
     "Interiérové dvere",
     "Bezpečnostné dvere",
     "Protipožiarne dvere"
+  ];
+
+  const technologies = [
+    {
+      name: "Vstupné dvere",
+      description: "Plastové aj hliníkové | Vysoká bezpečnosť",
+      image: "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Bezpečnostné dvere",
+      description: "RC2/RC3 trieda | Certifikovaná ochrana",
+      image: "https://images.unsplash.com/photo-1534237710431-e2fc698436d0?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Protipožiarne dvere",
+      description: "EI30 - EI90 | Požiarna odolnosť",
+      image: "https://images.unsplash.com/photo-1585128792020-803d29415281?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Interiérové dvere",
+      description: "Elegantný dizajn | Tichý chod",
+      image: "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=400&q=80"
+    }
   ];
   
   const certifications = [
@@ -52,6 +75,7 @@ const Doors = () => {
       technology={technology}
       images={images}
       features={features}
+      technologies={technologies}
       certifications={certifications}
       downloadableDocuments={downloadableDocuments}
     />

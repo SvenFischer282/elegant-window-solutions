@@ -1,15 +1,38 @@
 import ProductLayout from "@/components/ProductLayout";
 
 const SlidingSystems = () => {
-  const description = "Moderné posuvné systémy pre terasy a balkóny, ktoré spájajú eleganciu s funkčnosťou. Ideálne riešenie pre maximalizáciu priestoru a vytvorenie plynulého prechodu medzi interiérom a exteriérom.";
+  const description = "Moderné posuvné systémy pre terasy a balkóny, ktoré spájajú eleganciu s funkčnosťou. Ideálne riešenie pre maximalizáciu priestoru a vytvorenie plynulého prechodu medzi interiérom a exteriérom. Posuvné systémy umožňujú maximálne presvetlenie a otvorenie priestoru.";
   
-  const technology = "Vysoko kvalitné posuvné koľajnice s plynulým a tichým chodom. Systémy sú navrhnuté pre jednoduché použitie a dlhodobú spoľahlivosť. Vybavené moderným zasklením a tesneniami pre vynikajúcu tepelnú izoláciu.";
+  const technology = "Vysoko kvalitné posuvné koľajnice s plynulým a tichým chodom.";
   
   const features = [
     "Posuvné steny",
     "Terasové systémy",
     "Balkónové zasklenie",
     "Zimné záhrady"
+  ];
+
+  const technologies = [
+    {
+      name: "HST systém",
+      description: "Zdvíhavo-posuvný | Maximálna stabilita",
+      image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "PSK systém",
+      description: "Otočno-posuvný | Ventilácia + posun",
+      image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Skladacie systémy",
+      description: "Harmonikové | Úplne otvorená fasáda",
+      image: "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Panoramatické posuvné",
+      description: "Minimálny rám | Maximálny výhľad",
+      image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=400&q=80"
+    }
   ];
   
   const certifications = [
@@ -47,6 +70,7 @@ const SlidingSystems = () => {
       technology={technology}
       images={images}
       features={features}
+      technologies={technologies}
       certifications={certifications}
       downloadableDocuments={downloadableDocuments}
     />

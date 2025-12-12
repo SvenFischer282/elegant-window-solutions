@@ -1,15 +1,38 @@
 import ProductLayout from "@/components/ProductLayout";
 
 const GarageSystems = () => {
-  const description = "Kvalitné garážové brány a žalúzie pre rodinné domy aj komerčné objekty. Ponúkame široký výber dizajnov a farieb, ktoré sa prispôsobia architektonickému štýlu vašej budovy.";
+  const description = "Kvalitné garážové brány a žalúzie pre rodinné domy aj komerčné objekty. Ponúkame široký výber dizajnov a farieb, ktoré sa prispôsobia architektonickému štýlu vašej budovy. Naše systémy sú vybavené modernými bezpečnostnými prvkami.";
   
-  const technology = "Moderné pohony s automatickým ovládaním a bezpečnostnými prvkami. Naše systémy sú navrhnuté pre tichý chod a dlhodobú bezporuchovú prevádzku. Vysoká kvalita materiálov zabezpečuje odolnosť proti poveternostným vplyvom.";
+  const technology = "Moderné pohony s automatickým ovládaním a bezpečnostnými prvkami.";
   
   const features = [
     "Sekčné garážové brány",
     "Rolovateľné brány",
     "Vonkajšie žalúzie",
     "Automatické ovládanie"
+  ];
+
+  const technologies = [
+    {
+      name: "Sekčná brána",
+      description: "Vertikálne otváranie | Úspora priestoru",
+      image: "https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Rolovacia brána",
+      description: "Kompaktný systém | Priemyselné využitie",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Vonkajšie žalúzie",
+      description: "Tienenie + ochrana | Automatické ovládanie",
+      image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Bočná brána",
+      description: "Horizontálne otváranie | Jednoduché použitie",
+      image: "https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=400&q=80"
+    }
   ];
   
   const certifications = [
@@ -47,6 +70,7 @@ const GarageSystems = () => {
       technology={technology}
       images={images}
       features={features}
+      technologies={technologies}
       certifications={certifications}
       downloadableDocuments={downloadableDocuments}
     />

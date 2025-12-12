@@ -1,15 +1,38 @@
 import ProductLayout from "@/components/ProductLayout";
 
 const Facades = () => {
-  const description = "Moderné fasádne systémy pre komerčné a administratívne budovy. Kombinácia estetiky a funkčnosti, ktorá vytvára impozantný vzhľad budovy pri zachovaní vynikajúcich tepelno-izolačných vlastností.";
+  const description = "Moderné fasádne systémy pre komerčné a administratívne budovy. Kombinácia estetiky a funkčnosti, ktorá vytvára impozantný vzhľad budovy pri zachovaní vynikajúcich tepelno-izolačných vlastností. Naše fasádne systémy sú navrhnuté pre maximálnu energetickú účinnosť.";
   
-  const technology = "Používame pokročilé fasádne systémy z hliníka a skla. Naše riešenia zabezpečujú vynikajúcu tepelnú izoláciu, odolnosť voči poveternostným vplyvom a jednoduchú údržbu. Každý projekt je navrhnutý s ohľadom na energetickú efektívnosť a architektonické požiadavky.";
+  const technology = "Používame pokročilé fasádne systémy z hliníka a skla.";
   
   const features = [
     "Skeleto-oblúkové fasády",
     "Hliníkové fasády",
     "Ventilované fasády",
     "Atypické riešenia"
+  ];
+
+  const technologies = [
+    {
+      name: "Modulová fasáda",
+      description: "Predpripravené moduly | Rýchla montáž",
+      image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Rasterová fasáda",
+      description: "Klasická konštrukcia | Flexibilita",
+      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Štrukturálna fasáda",
+      description: "Skryté rámy | Čisté línie",
+      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Dvojplášťová fasáda",
+      description: "Najvyššia efektivita | Prémiová kvalita",
+      image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=400&q=80"
+    }
   ];
   
   const certifications = [
@@ -47,6 +70,7 @@ const Facades = () => {
       technology={technology}
       images={images}
       features={features}
+      technologies={technologies}
       certifications={certifications}
       downloadableDocuments={downloadableDocuments}
     />
