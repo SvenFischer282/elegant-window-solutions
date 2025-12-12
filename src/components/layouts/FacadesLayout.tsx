@@ -62,7 +62,7 @@ const FacadesLayout = () => {
             <div className="lg:col-span-2 space-y-8">
               <ProductHero image={images[0]} alt={title} />
 
-              <div className="space-y-4">
+              <div className="space-y-6">
                 <h1 className="text-3xl md:text-4xl font-semibold text-foreground">
                   Fasádne Zasklenie
                 </h1>
@@ -72,7 +72,7 @@ const FacadesLayout = () => {
                     Pri výstavbe budov sa{" "}
                     <strong className="text-foreground font-medium">
                       fasádne zasklenie
-                    </strong>
+                    </strong>{" "}
                     používa čoraz častejšie.
                   </p>
 
@@ -80,7 +80,7 @@ const FacadesLayout = () => {
                     Dôvodom je, že fasáda nielenže umožňuje dosiahnuť{" "}
                     <strong className="text-foreground font-medium">
                       krásny vonkajší vzhľad
-                    </strong>
+                    </strong>{" "}
                     stavby, ale je aj praktická zvnútra:{" "}
                     <strong className="text-foreground font-medium">
                       vizuálne zväčšuje priestor
@@ -92,7 +92,7 @@ const FacadesLayout = () => {
                     .
                   </p>
 
-                  <h2 className="text-xl font-medium text-foreground pt-4">
+                  <h2 className="text-xl font-medium text-foreground pt-6">
                     Široké Uplatnenie
                   </h2>
 
@@ -108,7 +108,7 @@ const FacadesLayout = () => {
                     ,{" "}
                     <strong className="text-foreground font-medium">
                       verejných
-                    </strong>
+                    </strong>{" "}
                     a{" "}
                     <strong className="text-foreground font-medium">
                       administratívnych budovách
@@ -128,13 +128,13 @@ const FacadesLayout = () => {
                     .
                   </p>
 
-                  <blockquote className="border-l-4 border-primary pl-4 italic text-lg text-foreground/80">
+                  <blockquote className="border-l-4 border-primary pl-4 my-6 italic text-lg text-foreground/80">
                     Výberom fasádneho zasklenia majitelia nehnuteľností dosahujú
                     dvojitý výsledok – originalitu budovy navonok a exkluzivitu
                     interiéru zvnútra.
                   </blockquote>
 
-                  <h2 className="text-xl font-medium text-foreground pt-4">
+                  <h2 className="text-xl font-medium text-foreground pt-6">
                     Materiály a Alternatívy
                   </h2>
 
