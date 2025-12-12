@@ -5,8 +5,8 @@ import ProductBreadcrumb from "@/components/product/ProductBreadcrumb";
 import ProductHero from "@/components/product/ProductHero";
 import ProductDescription from "@/components/product/ProductDescription";
 import TechnologyGrid from "@/components/product/TechnologyGrid";
-import CertificationsSection from "@/components/product/CertificationsSection";
-import DocumentsSection from "@/components/product/DocumentsSection";
+
+
 import ProductGallery from "@/components/product/ProductGallery";
 
 const SlidingSystemsLayout = () => {
@@ -85,8 +85,8 @@ const SlidingSystemsLayout = () => {
               <ProductHero image={images[0]} alt={title} />
               <ProductDescription title={title} description={description} features={features} />
               <TechnologyGrid technologies={technologies} />
-              <CertificationsSection certifications={certifications} />
-              <DocumentsSection documents={downloadableDocuments} />
+              
+              
               <ProductGallery images={images} title={title} />
             </div>
 
