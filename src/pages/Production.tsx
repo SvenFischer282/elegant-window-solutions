@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ContactSidebar from "@/components/ContactSidebar";
 import { Factory, Cog, CheckCircle, Zap } from "lucide-react";
 
 const Production = () => {
@@ -56,9 +55,9 @@ const Production = () => {
 
       <main className="flex-grow">
         <div className="max-w-7xl mx-auto px-4 py-16">
-          <div className="flex flex-col lg:flex-row gap-12">
+          <div>
             {/* Main Content */}
-            <div className="lg:w-2/3">
+            <div>
               {/* Production Header */}
               <section className="mb-16">
                 <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-foreground">
@@ -140,12 +139,6 @@ const Production = () => {
               </section>
             </div>
 
-            {/* Contact Sidebar */}
-            <div className="lg:w-1/3">
-              <div className="sticky top-24">
-                <ContactSidebar />
-              </div>
-            </div>
           </div>
         </div>
       </main>

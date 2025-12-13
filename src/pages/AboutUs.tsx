@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ContactSidebar from "@/components/ContactSidebar";
 import { Users, Award, Handshake, Clock } from "lucide-react";
 
 const AboutUs = () => {
