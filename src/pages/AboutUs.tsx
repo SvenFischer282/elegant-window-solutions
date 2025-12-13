@@ -1,7 +1,14 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Award, Users, MessageCircle, Clock, Factory, FileCheck } from "lucide-react";
-import heroImage from "@/assets/hero-windows.jpg";
+import {
+  Award,
+  Users,
+  MessageCircle,
+  Clock,
+  Factory,
+  FileCheck,
+} from "lucide-react";
+import heroImage from "@/assets/nase_sluzby/carousel_imgs/1.jpg";
 
 const AboutUs = () => {
   const features = [
@@ -59,7 +66,9 @@ const AboutUs = () => {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-background">
             <h1 className="text-4xl md:text-6xl font-bold mb-4">O nás</h1>
-            <p className="text-xl md:text-2xl opacity-90">Od roku 2004 pre váš komfort</p>
+            <p className="text-xl md:text-2xl opacity-90">
+              Od roku 2004 pre váš komfort
+            </p>
           </div>
         </div>
       </section>
@@ -70,16 +79,18 @@ const AboutUs = () => {
           <section className="mb-16">
             <div className="max-w-3xl mx-auto text-center space-y-6">
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Naša spoločnosť pôsobí na trhu od roku 2004. Od momentu založenia 
-                je našou hlavnou prioritou <strong className="text-foreground">komfort zákazníka</strong>.
+                Naša spoločnosť pôsobí na trhu od roku 2004. Od momentu
+                založenia je našou hlavnou prioritou{" "}
+                <strong className="text-foreground">komfort zákazníka</strong>.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Naši zamestnanci vám pomôžu určiť, aké produkty potrebujete, 
-                a vyberú riešenie podľa vášho rozpočtu.
+                Naši zamestnanci vám pomôžu určiť, aké produkty potrebujete, a
+                vyberú riešenie podľa vášho rozpočtu.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Počúvame vaše priania a vytvárame presne také konštrukcie, aké potrebujete. 
-                Na to máme spoľahlivého partnera WDS, vlastnú výrobu a kvalifikovaných zamestnancov.
+                Počúvame vaše priania a vytvárame presne také konštrukcie, aké
+                potrebujete. Na to máme spoľahlivého partnera WDS, vlastnú
+                výrobu a kvalifikovaných zamestnancov.
               </p>
             </div>
           </section>
@@ -101,9 +112,7 @@ const AboutUs = () => {
                   <h3 className="text-xl font-semibold mb-3 text-foreground">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground">
-                    {feature.description}
-                  </p>
+                  <p className="text-muted-foreground">{feature.description}</p>
                 </div>
               ))}
             </div>
