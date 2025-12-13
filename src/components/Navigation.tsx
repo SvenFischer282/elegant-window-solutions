@@ -140,46 +140,58 @@ const Navigation = () => {
         {/* Mobile Menu */}
         <div
           className={`md:hidden overflow-hidden transition-all duration-300 ease-out ${
-            isOpen ? "max-h-[500px] opacity-100 pb-4" : "max-h-0 opacity-0"
+            isOpen ? "max-h-[600px] opacity-100 pb-6" : "max-h-0 opacity-0"
           }`}
         >
-          <Link
-            to="/"
-            className="block px-4 py-2 text-sm font-medium hover:bg-primary-hover rounded-md transition-colors duration-200"
-            onClick={() => setIsOpen(false)}
-          >
-            Domov
-          </Link>
-          {homeLinks.map((link) => (
+          <div className="mt-2 space-y-1 border-t border-primary-foreground/20 pt-4">
             <Link
-              key={link.path}
-              to={link.path}
-              className="block px-4 py-2 pl-8 text-sm font-medium hover:bg-primary-hover rounded-md transition-colors duration-200"
+              to="/"
+              className="flex items-center gap-3 px-4 py-3 text-base font-medium hover:bg-primary-foreground/10 rounded-lg transition-all duration-200"
               onClick={() => setIsOpen(false)}
             >
-              {link.label}
+              <span className="w-1.5 h-1.5 rounded-full bg-primary-foreground/60"></span>
+              Domov
             </Link>
-          ))}
-          <div className="px-4 py-2 text-sm font-semibold text-primary-foreground/80">
-            Produkty
+            
+            {homeLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className="flex items-center gap-3 px-4 py-2.5 pl-8 text-sm text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10 rounded-lg transition-all duration-200"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+            
+            <div className="pt-2">
+              <div className="flex items-center gap-3 px-4 py-3 text-base font-medium">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary-foreground/60"></span>
+                Produkty
+              </div>
+              {products.map((product) => (
+                <Link
+                  key={product.path}
+                  to={product.path}
+                  className="flex items-center gap-3 px-4 py-2.5 pl-8 text-sm text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10 rounded-lg transition-all duration-200"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {product.label}
+                </Link>
+              ))}
+            </div>
+            
+            <div className="pt-2 border-t border-primary-foreground/20 mt-2">
+              <Link
+                to="/contact"
+                className="flex items-center gap-3 px-4 py-3 text-base font-medium hover:bg-primary-foreground/10 rounded-lg transition-all duration-200"
+                onClick={() => setIsOpen(false)}
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-primary-foreground/60"></span>
+                Kontakt
+              </Link>
+            </div>
           </div>
-          {products.map((product) => (
-            <Link
-              key={product.path}
-              to={product.path}
-              className="block px-4 py-2 pl-8 text-sm font-medium hover:bg-primary-hover rounded-md transition-colors duration-200"
-              onClick={() => setIsOpen(false)}
-            >
-              {product.label}
-            </Link>
-          ))}
-          <Link
-            to="/contact"
-            className="block px-4 py-2 text-sm font-medium hover:bg-primary-hover rounded-md transition-colors duration-200"
-            onClick={() => setIsOpen(false)}
-          >
-            Kontakt
-          </Link>
         </div>
       </div>
     </nav>
