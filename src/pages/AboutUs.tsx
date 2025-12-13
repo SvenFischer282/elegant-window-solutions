@@ -51,10 +51,10 @@ const AboutUs = () => {
       </section>
 
       <main className="flex-grow">
-        <div className="max-w-7xl mx-auto px-4 py-16">
-          <div className="flex flex-col lg:flex-row gap-12">
+        <div className="max-w-5xl mx-auto px-4 py-16">
+          <div>
             {/* Main Content */}
-            <div className="lg:w-2/3">
+            <div>
               {/* About Section */}
               <section className="mb-16">
                 <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-foreground">
