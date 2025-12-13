@@ -19,18 +19,26 @@ const carouselImages = [
   {
     src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80",
     alt: "Profesionálna montáž okien",
+    title: "Profesionálna montáž",
+    subtitle: "20 rokov skúseností s montážou okien a dverí",
   },
   {
     src: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=1920&q=80",
     alt: "20 rokov skúseností",
+    title: "Vlastná výroba",
+    subtitle: "Všetky produkty vyrábame vo vlastných priestoroch",
   },
   {
     src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80",
     alt: "Kompletné riešenia pre váš domov",
+    title: "Kompletné riešenia",
+    subtitle: "Od návrhu až po realizáciu",
   },
   {
     src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80",
     alt: "Kvalitné okná a dvere",
+    title: "Kvalitné produkty",
+    subtitle: "Plastové a hliníkové okná a dvere",
   },
 ];
 
@@ -102,8 +110,6 @@ const OurServices = () => {
       
       <HeroCarousel 
         images={carouselImages} 
-        title="Naše služby"
-        subtitle="Kompletný sortiment služieb pre váš domov"
         showParallax={true}
       />
 

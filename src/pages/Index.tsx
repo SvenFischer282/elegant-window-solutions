@@ -66,15 +66,13 @@ const Index = () => {
       <section className="relative">
         <HeroCarousel
           images={[
-            { src: carouselImg1, alt: "" },
-            { src: carouselImg2, alt: "" },
-            { src: carouselImg3, alt: "" },
+            { src: carouselImg1, alt: "", title: "Lorem ipsum dolor sit amet", subtitle: "Consectetur adipiscing elit, sed do eiusmod tempor incididunt" },
+            { src: carouselImg2, alt: "", title: "Kvalitné okná a dvere", subtitle: "Moderné riešenia pre váš domov" },
+            { src: carouselImg3, alt: "", title: "20 rokov skúseností", subtitle: "Profesionálna výroba a montáž" },
           ]}
           height="calc(100vh - 4rem)"
           showParallax={true}
           showDots={true}
-          title="Lorem ipsum dolor sit amet"
-          subtitle="Consectetur adipiscing elit, sed do eiusmod tempor incididunt"
         />
         {/* CTA Button overlay */}
         <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-10">

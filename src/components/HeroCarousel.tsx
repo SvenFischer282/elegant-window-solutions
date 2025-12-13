@@ -10,6 +10,8 @@ import Autoplay from "embla-carousel-autoplay";
 interface CarouselImage {
   src: string;
   alt: string;
+  title?: string;
+  subtitle?: string;
 }
 
 interface HeroCarouselProps {
@@ -18,8 +20,6 @@ interface HeroCarouselProps {
   autoplayDelay?: number;
   showParallax?: boolean;
   showDots?: boolean;
-  title?: string;
-  subtitle?: string;
 }
 
 const HeroCarousel = ({
@@ -28,8 +28,6 @@ const HeroCarousel = ({
   autoplayDelay = 5000,
   showParallax = true,
   showDots = true,
-  title = "",
-  subtitle = "",
 }: HeroCarouselProps) => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
@@ -64,6 +62,9 @@ const HeroCarousel = ({
     [api]
   );
 
+  const currentImage = images[current];
+  const hasText = currentImage?.title || currentImage?.subtitle;
+
   return (
     <section className="relative w-full" style={{ height }}>
       <Carousel
@@ -93,8 +94,8 @@ const HeroCarousel = ({
         </CarouselContent>
       </Carousel>
 
-      {/* Text overlay with parallax */}
-      {(title || subtitle) && (
+      {/* Text overlay with parallax - unique per slide */}
+      {hasText && (
         <div 
           className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 transition-all duration-100 ease-out will-change-transform"
           style={showParallax ? {
@@ -103,14 +104,14 @@ const HeroCarousel = ({
           } : undefined}
         >
           <div className="text-center text-background px-4">
-            {title && (
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in">
-                {title}
+            {currentImage?.title && (
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in transition-opacity duration-500">
+                {currentImage.title}
               </h1>
             )}
-            {subtitle && (
-              <p className="text-lg md:text-xl lg:text-2xl max-w-2xl mx-auto animate-fade-in">
-                {subtitle}
+            {currentImage?.subtitle && (
+              <p className="text-lg md:text-xl lg:text-2xl max-w-2xl mx-auto animate-fade-in transition-opacity duration-500">
+                {currentImage.subtitle}
               </p>
             )}
           </div>
