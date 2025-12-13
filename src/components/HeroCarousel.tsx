@@ -10,8 +10,6 @@ import Autoplay from "embla-carousel-autoplay";
 interface CarouselImage {
   src: string;
   alt: string;
-  title?: string;
-  subtitle?: string;
 }
 
 interface HeroCarouselProps {
@@ -62,9 +60,6 @@ const HeroCarousel = ({
     [api]
   );
 
-  const currentImage = images[current];
-  const hasText = currentImage?.title || currentImage?.subtitle;
-
   return (
     <section className="relative w-full" style={{ height }}>
       <Carousel
@@ -88,35 +83,26 @@ const HeroCarousel = ({
                   className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                 />
                 <div className="absolute inset-0 bg-foreground/40 pointer-events-none" />
+                <div
+                  className="absolute inset-0 flex items-center justify-center pointer-events-none transition-all duration-500 ease-out will-change-transform"
+                  style={
+                    showParallax
+                      ? {
+                          transform: `translateY(${scrollY * 0.5}px)`,
+                          opacity: Math.max(0, 1 - scrollY / 400),
+                        }
+                      : undefined
+                  }
+                >
+                  <div className="text-center text-background">
+                    <h2 className="text-4xl md:text-6xl font-bold mb-4">{image.alt}</h2>
+                  </div>
+                </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
       </Carousel>
-
-      {/* Text overlay with parallax - unique per slide */}
-      {hasText && (
-        <div 
-          className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 transition-all duration-100 ease-out will-change-transform"
-          style={showParallax ? {
-            transform: `translateY(${scrollY * 0.5}px)`,
-            opacity: Math.max(0, 1 - scrollY / 400),
-          } : undefined}
-        >
-          <div className="text-center text-background px-4">
-            {currentImage?.title && (
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in transition-opacity duration-500">
-                {currentImage.title}
-              </h1>
-            )}
-            {currentImage?.subtitle && (
-              <p className="text-lg md:text-xl lg:text-2xl max-w-2xl mx-auto animate-fade-in transition-opacity duration-500">
-                {currentImage.subtitle}
-              </p>
-            )}
-          </div>
-        </div>
-      )}
       
       {showDots && (
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-10">
