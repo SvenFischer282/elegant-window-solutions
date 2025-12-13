@@ -30,21 +30,26 @@ import carouselImg3 from "@/assets/nase_sluzby/carousel_imgs/3.jpg";
 
 const Index = () => {
   const products = [
-    { title: "Okná", icon: RectangleHorizontal, path: "/windows" },
-    { title: "Dvere", icon: DoorOpen, path: "/doors" },
+    { 
+      title: "Okná", 
+      path: "/windows",
+      image: "https://vesnyanka.com.ua/wp-content/uploads/2022/10/valeriy-lobanov-sCFjj3evA1s-unsplash-1-scaled.jpg"
+    },
+    { 
+      title: "Dvere", 
+      path: "/doors",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+    },
     {
       title: "Posuvné systémy",
-      icon: ArrowRightLeft,
       path: "/sliding-systems",
+      image: "https://vesnyanka.com.ua/wp-content/uploads/2025/03/83d2470a-7357-4e2a-a0fc-3524bcc91433.webp"
     },
-    { title: "Hliník", icon: Box, path: "/aluminum" },
-    { title: "Fasády", icon: Building2, path: "/facades" },
-    {
-      title: "Garážové brány a žalúzie",
-      icon: Warehouse,
-      path: "/garage-systems",
+    { 
+      title: "Fasády", 
+      path: "/facades",
+      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
     },
-    { title: "Doplnkové prvky", icon: Plus, path: "/additional-elements" },
   ];
 
   const projects = [
@@ -119,19 +124,30 @@ const Index = () => {
       </section>
 
       {/* Products Section */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12 text-gradient">
             Naše produkty
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {products.map((product) => (
-              <ProductCard
+              <Link
                 key={product.path}
-                title={product.title}
-                icon={product.icon}
-                path={product.path}
-              />
+                to={product.path}
+                className="group relative aspect-[3/4] overflow-hidden rounded-lg"
+              >
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <h3 className="text-lg md:text-xl font-semibold text-white">
+                    {product.title}
+                  </h3>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
