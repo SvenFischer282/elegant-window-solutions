@@ -97,10 +97,10 @@ const OurServices = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col overflow-x-hidden">
+    <div className="min-h-screen flex flex-col overflow-x-hidden pt-16">
       <Navigation />
       
-      <HeroCarousel images={carouselImages} />
+      <HeroCarousel images={carouselImages} height="calc(100vh - 4rem)" />
 
       <main className="flex-grow">
         <div className="max-w-7xl mx-auto px-4 py-16">
