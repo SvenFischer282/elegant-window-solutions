@@ -46,6 +46,11 @@ const Index = () => {
       image: "https://vesnyanka.com.ua/wp-content/uploads/2025/03/83d2470a-7357-4e2a-a0fc-3524bcc91433.webp"
     },
     { 
+      title: "Hliník", 
+      path: "/aluminum",
+      image: "https://vesnyanka.com.ua/wp-content/uploads/2025/03/DALL%C2%B7E-2025-03-31-21.43.31-A-modern-aluminum-and-glass-door-designed-for-contemporary-homes-and-commercial-spaces.-The-door-features-a-sleek-minimalistic-frame-with-a-large-gla.webp"
+    },
+    { 
       title: "Fasády", 
       path: "/facades",
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
