@@ -37,7 +37,7 @@ const FacadesLayout = () => {
   const images = ["/src/assets/product_imgs/facades/luxury-holiday-home.jpg"];
 
   return (
-    <div className="min-h-screen flex flex-col bg-muted/30">
+    <div className="min-h-screen flex flex-col bg-muted/30 pt-16">
       <Navigation />
 
       <main className="flex-1 animate-fade-in">
