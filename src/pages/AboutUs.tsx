@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Award, Users, MessageCircle, Clock, Factory, FileCheck } from "lucide-react";
-import heroImage from "@/assets/nase_sluzby/carousel_imgs/1.jpg";
+import heroImage from "@/assets/hero-windows.jpg";
 
 const AboutUs = () => {
   const features = [
