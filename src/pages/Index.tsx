@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -14,16 +13,6 @@ import carouselImg2 from "@/assets/nase_sluzby/carousel_imgs/2.jpg";
 import carouselImg3 from "@/assets/nase_sluzby/carousel_imgs/3.jpg";
 
 const Index = () => {
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const products = [
     { title: "Okná", icon: RectangleHorizontal, path: "/windows" },
     { title: "Dvere", icon: DoorOpen, path: "/doors" },
@@ -82,31 +71,19 @@ const Index = () => {
             { src: carouselImg3, alt: "" },
           ]}
           height="calc(100vh - 4rem)"
-          showParallax={false}
+          showParallax={true}
           showDots={true}
+          title="Lorem ipsum dolor sit amet"
+          subtitle="Consectetur adipiscing elit, sed do eiusmod tempor incididunt"
         />
-        {/* Static text overlay with parallax */}
-        <div 
-          className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 transition-all duration-100 ease-out will-change-transform"
-          style={{
-            transform: `translateY(${scrollY * 0.5}px)`,
-            opacity: Math.max(0, 1 - scrollY / 400),
-          }}
-        >
-          <div className="text-center text-background px-4 pointer-events-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
-              Lorem ipsum dolor sit amet
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto animate-fade-in">
-              Consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            </p>
-            <Link to="/windows">
-              <Button size="lg" className="bg-primary hover:bg-primary-hover text-primary-foreground font-semibold animate-fade-in">
-                Zistite viac o našich produktoch
-                <ChevronRight className="ml-2" size={20} />
-              </Button>
-            </Link>
-          </div>
+        {/* CTA Button overlay */}
+        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-10">
+          <Link to="/windows">
+            <Button size="lg" className="bg-primary hover:bg-primary-hover text-primary-foreground font-semibold animate-fade-in">
+              Zistite viac o našich produktoch
+              <ChevronRight className="ml-2" size={20} />
+            </Button>
+          </Link>
         </div>
       </section>
 

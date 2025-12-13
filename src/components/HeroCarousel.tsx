@@ -18,6 +18,8 @@ interface HeroCarouselProps {
   autoplayDelay?: number;
   showParallax?: boolean;
   showDots?: boolean;
+  title?: string;
+  subtitle?: string;
 }
 
 const HeroCarousel = ({
@@ -26,6 +28,8 @@ const HeroCarousel = ({
   autoplayDelay = 5000,
   showParallax = true,
   showDots = true,
+  title = "",
+  subtitle = "",
 }: HeroCarouselProps) => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
@@ -88,6 +92,30 @@ const HeroCarousel = ({
           ))}
         </CarouselContent>
       </Carousel>
+
+      {/* Text overlay with parallax */}
+      {(title || subtitle) && (
+        <div 
+          className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 transition-all duration-100 ease-out will-change-transform"
+          style={showParallax ? {
+            transform: `translateY(${scrollY * 0.5}px)`,
+            opacity: Math.max(0, 1 - scrollY / 400),
+          } : undefined}
+        >
+          <div className="text-center text-background px-4">
+            {title && (
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in">
+                {title}
+              </h1>
+            )}
+            {subtitle && (
+              <p className="text-lg md:text-xl lg:text-2xl max-w-2xl mx-auto animate-fade-in">
+                {subtitle}
+              </p>
+            )}
+          </div>
+        </div>
+      )}
       
       {showDots && (
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-10">
