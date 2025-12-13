@@ -7,9 +7,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold text-primary mb-4">company</h3>
+            <h3 className="text-xl font-bold text-primary mb-4">ARGO SNV</h3>
             <p className="text-muted-foreground mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+              Sme slovenská spoločnosť s viac ako 20-ročnými skúsenosťami vo výrobe a montáži okien, dverí a fasádnych systémov. Kvalita a spokojnosť zákazníkov sú našou prioritou.
             </p>
           </div>
 
@@ -62,7 +62,18 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground text-sm">
-          <p>&copy; {new Date().getFullYear()} company. Všetky práva vyhradené.</p>
+          <p>&copy; {new Date().getFullYear()} ARGO SNV. Všetky práva vyhradené.</p>
+          <p className="mt-2">
+            Created by{" "}
+            <a 
+              href="https://svenfischer.sk" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              Sven Fischer
+            </a>
+          </p>
         </div>
       </div>
     </footer>
