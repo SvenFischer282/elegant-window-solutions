@@ -134,12 +134,12 @@ const Index = () => {
           <h2 className="text-4xl font-bold text-center mb-12 text-gradient">
             Naše produkty
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             {products.map((product) => (
               <Link
                 key={product.path}
                 to={product.path}
-                className="group relative aspect-[3/4] overflow-hidden rounded-lg"
+                className="group relative aspect-[3/4] overflow-hidden rounded-lg w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(20%-0.8rem)]"
               >
                 <img
                   src={product.image}
