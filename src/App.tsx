@@ -11,8 +11,6 @@ import Doors from "./pages/Doors";
 import SlidingSystems from "./pages/SlidingSystems";
 import Aluminum from "./pages/Aluminum";
 import Facades from "./pages/Facades";
-import GarageSystems from "./pages/GarageSystems";
-import AdditionalElements from "./pages/AdditionalElements";
 import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
@@ -31,8 +29,7 @@ const App = () => (
           <Route path="/sliding-systems" element={<SlidingSystems />} />
           <Route path="/aluminum" element={<Aluminum />} />
           <Route path="/facades" element={<Facades />} />
-          <Route path="/garage-systems" element={<GarageSystems />} />
-          <Route path="/additional-elements" element={<AdditionalElements />} />
+
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

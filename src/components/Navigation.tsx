@@ -27,15 +27,55 @@ const Navigation = () => {
           <Link to="/" className="text-2xl font-bold tracking-tight">
             company
           </Link>
-
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link
+            {/* <Link
               to="/"
               className="px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-hover transition-colors"
             >
               Domov
-            </Link>
+            </Link> */}
+
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="ghost"
+                  className="text-primary-foreground hover:bg-primary-hover font-medium"
+                >
+                  Domov
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent
+                align="start"
+                className="w-56 bg-background border-border shadow-lg z-50"
+              >
+                <DropdownMenuItem>
+                  <Link
+                    to={"/about-us"}
+                    className="w-full cursor-pointer hover:bg-accent"
+                  >
+                    {"O nás"}
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link
+                    to={"/our-services"}
+                    className="w-full cursor-pointer hover:bg-accent"
+                  >
+                    {"Naše služby"}
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link
+                    to={"/production"}
+                    className="w-full cursor-pointer hover:bg-accent"
+                  >
+                    {"Produkcia"}
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
 
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -71,7 +111,6 @@ const Navigation = () => {
               Kontakt
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"
