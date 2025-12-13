@@ -20,6 +20,7 @@ import {
   Plus,
   MapPin,
   Calendar,
+  Contact,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import HeroCarousel from "@/components/HeroCarousel";
@@ -30,30 +31,35 @@ import carouselImg3 from "@/assets/nase_sluzby/carousel_imgs/3.jpg";
 
 const Index = () => {
   const products = [
-    { 
-      title: "Okná", 
+    {
+      title: "Okná",
       path: "/windows",
-      image: "https://vesnyanka.com.ua/wp-content/uploads/2022/10/valeriy-lobanov-sCFjj3evA1s-unsplash-1-scaled.jpg"
+      image:
+        "https://vesnyanka.com.ua/wp-content/uploads/2022/10/valeriy-lobanov-sCFjj3evA1s-unsplash-1-scaled.jpg",
     },
-    { 
-      title: "Dvere", 
+    {
+      title: "Dvere",
       path: "/doors",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+      image:
+        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
     },
     {
       title: "Posuvné systémy",
       path: "/sliding-systems",
-      image: "https://vesnyanka.com.ua/wp-content/uploads/2025/03/83d2470a-7357-4e2a-a0fc-3524bcc91433.webp"
+      image:
+        "https://vesnyanka.com.ua/wp-content/uploads/2025/03/83d2470a-7357-4e2a-a0fc-3524bcc91433.webp",
     },
-    { 
-      title: "Hliník", 
+    {
+      title: "Hliník",
       path: "/aluminum",
-      image: "https://vesnyanka.com.ua/wp-content/uploads/2025/03/DALL%C2%B7E-2025-03-31-21.43.31-A-modern-aluminum-and-glass-door-designed-for-contemporary-homes-and-commercial-spaces.-The-door-features-a-sleek-minimalistic-frame-with-a-large-gla.webp"
+      image:
+        "https://vesnyanka.com.ua/wp-content/uploads/2025/03/DALL%C2%B7E-2025-03-31-21.43.31-A-modern-aluminum-and-glass-door-designed-for-contemporary-homes-and-commercial-spaces.-The-door-features-a-sleek-minimalistic-frame-with-a-large-gla.webp",
     },
-    { 
-      title: "Fasády", 
+    {
+      title: "Fasády",
       path: "/facades",
-      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
+      image:
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
     },
   ];
 
@@ -107,12 +113,13 @@ const Index = () => {
         height="calc(100vh - 4rem)"
         staticText={{
           title: "Kvalitné okná a dvere",
-          subtitle: "Viac ako 20 rokov skúseností s výrobou a montážou okien, dverí a fasád"
+          subtitle:
+            "Viac ako 20 rokov skúseností s výrobou a montážou okien, dverí a fasád",
         }}
       />
 
       {/* About Section */}
-      <section className="py-20 bg-background">
+      {/* <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6 text-gradient">O nás</h2>
@@ -126,7 +133,7 @@ const Index = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Products Section */}
       <section className="py-20 bg-background">
@@ -159,7 +166,7 @@ const Index = () => {
       </section>
 
       {/* References Section */}
-      <section className="py-20 bg-muted">
+      {/* <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-gradient">
@@ -209,7 +216,7 @@ const Index = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
       <section className="py-20 bg-background">
