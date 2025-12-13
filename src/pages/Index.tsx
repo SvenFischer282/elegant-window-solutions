@@ -88,7 +88,7 @@ const Index = () => {
         ]}
         height="calc(100vh - 4rem)"
         staticText={{
-          title: "Kvalitné okná a dvere",
+          title: "Okná a dvere bez starostí",
           subtitle:
             "Viac ako 20 rokov skúseností s výrobou a montážou okien, dverí a fasád",
         }}

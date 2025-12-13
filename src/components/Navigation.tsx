@@ -27,7 +27,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="text-2xl font-bold tracking-tight">
-            company
+            ARGO SNV
           </Link>
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-4">
@@ -42,16 +42,16 @@ const Navigation = () => {
                 className="flex items-center px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-hover transition-all duration-300"
               >
                 Domov
-                <ChevronDown 
+                <ChevronDown
                   className={`ml-1 h-4 w-4 transition-transform duration-300 ease-out ${
                     homeDropdownOpen ? "rotate-180" : "rotate-0"
-                  }`} 
+                  }`}
                 />
               </Link>
-              <div 
+              <div
                 className={`absolute top-full left-0 w-56 bg-background border border-border shadow-lg rounded-md py-1 z-50 transition-all duration-300 ease-out origin-top ${
-                  homeDropdownOpen 
-                    ? "opacity-100 scale-y-100 translate-y-0" 
+                  homeDropdownOpen
+                    ? "opacity-100 scale-y-100 translate-y-0"
                     : "opacity-0 scale-y-95 -translate-y-2 pointer-events-none"
                 }`}
               >
@@ -60,7 +60,11 @@ const Navigation = () => {
                     key={link.path}
                     to={link.path}
                     className="block px-4 py-2 text-sm text-foreground hover:bg-accent transition-colors duration-200"
-                    style={{ transitionDelay: homeDropdownOpen ? `${index * 50}ms` : "0ms" }}
+                    style={{
+                      transitionDelay: homeDropdownOpen
+                        ? `${index * 50}ms`
+                        : "0ms",
+                    }}
                   >
                     {link.label}
                   </Link>
@@ -75,20 +79,20 @@ const Navigation = () => {
               onMouseLeave={() => setProductsDropdownOpen(false)}
             >
               <Link
-                to="/windows"
+                to="/products"
                 className="flex items-center px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-hover transition-all duration-300"
               >
                 Produkty
-                <ChevronDown 
+                <ChevronDown
                   className={`ml-1 h-4 w-4 transition-transform duration-300 ease-out ${
                     productsDropdownOpen ? "rotate-180" : "rotate-0"
-                  }`} 
+                  }`}
                 />
               </Link>
-              <div 
+              <div
                 className={`absolute top-full left-0 w-56 bg-background border border-border shadow-lg rounded-md py-1 z-50 transition-all duration-300 ease-out origin-top ${
-                  productsDropdownOpen 
-                    ? "opacity-100 scale-y-100 translate-y-0" 
+                  productsDropdownOpen
+                    ? "opacity-100 scale-y-100 translate-y-0"
                     : "opacity-0 scale-y-95 -translate-y-2 pointer-events-none"
                 }`}
               >
@@ -97,7 +101,11 @@ const Navigation = () => {
                     key={product.path}
                     to={product.path}
                     className="block px-4 py-2 text-sm text-foreground hover:bg-accent transition-colors duration-200"
-                    style={{ transitionDelay: productsDropdownOpen ? `${index * 50}ms` : "0ms" }}
+                    style={{
+                      transitionDelay: productsDropdownOpen
+                        ? `${index * 50}ms`
+                        : "0ms",
+                    }}
                   >
                     {product.label}
                   </Link>
@@ -119,14 +127,18 @@ const Navigation = () => {
             className="md:hidden text-primary-foreground hover:bg-primary-hover transition-all duration-300"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <div className={`transition-transform duration-300 ${isOpen ? "rotate-90" : "rotate-0"}`}>
+            <div
+              className={`transition-transform duration-300 ${
+                isOpen ? "rotate-90" : "rotate-0"
+              }`}
+            >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </div>
           </Button>
         </div>
 
         {/* Mobile Menu */}
-        <div 
+        <div
           className={`md:hidden overflow-hidden transition-all duration-300 ease-out ${
             isOpen ? "max-h-[500px] opacity-100 pb-4" : "max-h-0 opacity-0"
           }`}

@@ -11,8 +11,7 @@ const OurProducts = () => {
     {
       title: "Dvere",
       path: "/doors",
-      image:
-        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+      image: "/src/assets/product_imgs/doors/glass_door_image.jpg",
     },
     {
       title: "Posuvné systémy",
