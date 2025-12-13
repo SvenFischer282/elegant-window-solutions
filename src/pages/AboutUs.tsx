@@ -8,32 +8,36 @@ const AboutUs = () => {
     {
       icon: Award,
       title: "Kvalita na prvom mieste",
-      description: "Používame len overené materiály a technológie od popredných európskych výrobcov.",
+      description:
+        "Používame len overené materiály a technológie od popredných európskych výrobcov.",
     },
     {
       icon: Users,
       title: "Skúsený tím",
-      description: "Naši odborníci majú viac ako 15-ročné skúsenosti v oblasti okien a dverí.",
+      description:
+        "Naši odborníci majú viac ako 15-ročné skúsenosti v oblasti okien a dverí.",
     },
     {
       icon: Handshake,
       title: "Individuálny prístup",
-      description: "Každý projekt riešime individuálne podľa potrieb a požiadaviek zákazníka.",
+      description:
+        "Každý projekt riešime individuálne podľa potrieb a požiadaviek zákazníka.",
     },
     {
       icon: Clock,
       title: "Rýchla realizácia",
-      description: "Dodržiavame dohodnuté termíny a zabezpečujeme efektívnu realizáciu.",
+      description:
+        "Dodržiavame dohodnuté termíny a zabezpečujeme efektívnu realizáciu.",
     },
   ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative h-[50vh] min-h-[400px] max-h-[600px] overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80')`,
@@ -59,13 +63,15 @@ const AboutUs = () => {
                 </h1>
                 <div className="max-w-3xl mx-auto text-center">
                   <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                    Naša spoločnosť pôsobí na trhu od roku 2008. Od momentu založenia je našou hlavnou prioritou 
-                    komfort a spokojnosť zákazníka. Náš tím odborníkov vám pomôže vybrať produkty, ktoré 
-                    najlepšie vyhovujú vašim potrebám a rozpočtu.
+                    Naša spoločnosť pôsobí na trhu od roku 2008. Od momentu
+                    založenia je našou hlavnou prioritou komfort a spokojnosť
+                    zákazníka. Náš tím odborníkov vám pomôže vybrať produkty,
+                    ktoré najlepšie vyhovujú vašim potrebám a rozpočtu.
                   </p>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    Počúvame vaše priania a vytvárame presne také konštrukcie, aké potrebujete. Na to máme 
-                    spoľahlivého partnera WDS, vlastnú výrobu a kvalifikovaných zamestnancov s dlhoročnými 
+                    Počúvame vaše priania a vytvárame presne také konštrukcie,
+                    aké potrebujete. Na to máme spoľahlivého partnera WDS,
+                    vlastnú výrobu a kvalifikovaných zamestnancov s dlhoročnými
                     skúsenosťami v obore.
                   </p>
                 </div>
@@ -78,7 +84,7 @@ const AboutUs = () => {
                 </h2>
                 <div className="grid md:grid-cols-2 gap-8">
                   {features.map((feature, index) => (
-                    <div 
+                    <div
                       key={index}
                       className="p-6 bg-accent/30 rounded-lg hover-lift"
                     >
@@ -102,18 +108,12 @@ const AboutUs = () => {
                   Naša misia
                 </h2>
                 <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto leading-relaxed">
-                  Prinášame do vašich domovov a kancelárií kvalitné okná a dvere, ktoré kombinujú moderný dizajn, 
-                  vynikajúcu tepelnú izoláciu a dlhú životnosť. Naším cieľom je vytvárať produkty, ktoré zlepšujú 
-                  kvalitu života a znižujú náklady na energie.
+                  Prinášame do vašich domovov a kancelárií kvalitné okná a
+                  dvere, ktoré kombinujú moderný dizajn, vynikajúcu tepelnú
+                  izoláciu a dlhú životnosť. Naším cieľom je vytvárať produkty,
+                  ktoré zlepšujú kvalitu života a znižujú náklady na energie.
                 </p>
               </section>
-            </div>
-
-            {/* Contact Sidebar */}
-            <div className="lg:w-1/3">
-              <div className="sticky top-24">
-                <ContactSidebar />
-              </div>
             </div>
           </div>
         </div>
