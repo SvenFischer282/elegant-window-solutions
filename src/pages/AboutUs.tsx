@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Award, Users, MessageCircle, Clock, Factory, FileCheck } from "lucide-react";
+import heroImage from "@/assets/nase_sluzby/carousel_imgs/1.jpg";
 
 const AboutUs = () => {
   const features = [
@@ -51,7 +52,7 @@ const AboutUs = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80')`,
+            backgroundImage: `url(${heroImage})`,
           }}
         />
         <div className="absolute inset-0 bg-foreground/50" />
