@@ -118,11 +118,13 @@ const OurServices = () => {
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className="absolute inset-0 w-full h-[120%] object-cover pointer-events-none transition-transform duration-100"
-                    style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+                    className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                   />
                   <div className="absolute inset-0 bg-foreground/40 pointer-events-none" />
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div 
+                    className="absolute inset-0 flex items-center justify-center pointer-events-none transition-transform duration-500 ease-out will-change-transform"
+                    style={{ transform: `translateY(${scrollY * 0.5}px)` }}
+                  >
                     <div className="text-center text-background">
                       <h2 className="text-4xl md:text-6xl font-bold mb-4">{image.alt}</h2>
                     </div>
