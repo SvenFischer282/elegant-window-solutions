@@ -4,14 +4,11 @@ import HeroCarousel from "@/components/HeroCarousel";
 import { 
   LayoutGrid, 
   DoorOpen, 
-  Blinds, 
   Warehouse, 
   Building2, 
   SlidersHorizontal, 
-  PanelTop,
-  Hammer,
-  Users,
   Factory,
+  Users,
   Heart
 } from "lucide-react";
 
@@ -47,11 +44,6 @@ const OurServices = () => {
       description: "Moderné hliníkové konštrukcie pre náročných zákazníkov s dlhou životnosťou.",
     },
     {
-      icon: Blinds,
-      title: "Žalúzie a rolety",
-      description: "Horizontálne žalúzie a rolovacie závesy pre dokonalé tienenie.",
-    },
-    {
       icon: Warehouse,
       title: "Garážové brány",
       description: "Kvalitné garážové brány s motorovým pohonom a diaľkovým ovládaním.",
@@ -65,16 +57,6 @@ const OurServices = () => {
       icon: SlidersHorizontal,
       title: "Posuvné systémy",
       description: "Elegantné posuvné dvere a okná pre maximálne využitie priestoru.",
-    },
-    {
-      icon: PanelTop,
-      title: "Hliníkové priečky",
-      description: "Interiérové hliníkové priečky pre kancelárie a komerčné priestory.",
-    },
-    {
-      icon: Hammer,
-      title: "Doplnkové prvky",
-      description: "Výroba parapetov, odkvapov, striešok a ďalších doplnkov.",
     },
   ];
 
@@ -137,23 +119,45 @@ const OurServices = () => {
 
           {/* Services Grid */}
           <section className="mb-16">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {services.map((service, index) => (
-                <div 
-                  key={index}
-                  className="p-6 bg-background border border-border rounded-lg hover:border-primary/30 hover:shadow-lg transition-all duration-300"
-                >
-                  <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center mb-4">
-                    <service.icon className="w-7 h-7 text-primary-foreground" />
+            <div className="max-w-5xl mx-auto">
+              {/* First row - 3 cards */}
+              <div className="grid md:grid-cols-3 gap-6 mb-6">
+                {services.slice(0, 3).map((service, index) => (
+                  <div 
+                    key={index}
+                    className="p-6 bg-background border border-border rounded-lg hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center mb-4">
+                      <service.icon className="w-7 h-7 text-primary-foreground" />
+                    </div>
+                    <h3 className="text-lg font-semibold mb-2 text-foreground">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      {service.description}
+                    </p>
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 text-foreground">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {service.description}
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
+              {/* Second row - 2 cards centered */}
+              <div className="flex justify-center gap-6 flex-wrap">
+                {services.slice(3).map((service, index) => (
+                  <div 
+                    key={index + 3}
+                    className="p-6 bg-background border border-border rounded-lg hover:border-primary/30 hover:shadow-lg transition-all duration-300 w-full md:w-[calc(33.333%-0.75rem)]"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center mb-4">
+                      <service.icon className="w-7 h-7 text-primary-foreground" />
+                    </div>
+                    <h3 className="text-lg font-semibold mb-2 text-foreground">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      {service.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </section>
 
