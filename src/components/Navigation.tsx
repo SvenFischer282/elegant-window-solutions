@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -7,6 +7,11 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [homeDropdownOpen, setHomeDropdownOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
+  const location = useLocation();
+  
+  const isActive = (path: string) => location.pathname === path;
+  const isProductActive = () => products.some(p => location.pathname === p.path);
+  const isHomeDropdownActive = () => homeLinks.some(l => location.pathname === l.path);
 
   const products = [
     { label: "Okná", path: "/windows" },
@@ -39,7 +44,11 @@ const Navigation = () => {
             >
               <Link
                 to="/"
-                className="flex items-center px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-hover transition-all duration-300"
+                className={`flex items-center px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+                  isActive("/") || isHomeDropdownActive()
+                    ? "bg-primary-foreground/20 border-b-2 border-primary-foreground"
+                    : "hover:bg-primary-hover"
+                }`}
               >
                 Domov
                 <ChevronDown
@@ -59,7 +68,11 @@ const Navigation = () => {
                   <Link
                     key={link.path}
                     to={link.path}
-                    className="block px-4 py-2 text-sm text-foreground hover:bg-accent transition-colors duration-200"
+                    className={`block px-4 py-2 text-sm transition-colors duration-200 ${
+                      isActive(link.path)
+                        ? "bg-primary text-primary-foreground font-medium"
+                        : "text-foreground hover:bg-accent"
+                    }`}
                     style={{
                       transitionDelay: homeDropdownOpen
                         ? `${index * 50}ms`
@@ -80,7 +93,11 @@ const Navigation = () => {
             >
               <Link
                 to="/products"
-                className="flex items-center px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-hover transition-all duration-300"
+                className={`flex items-center px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+                  isActive("/products") || isProductActive()
+                    ? "bg-primary-foreground/20 border-b-2 border-primary-foreground"
+                    : "hover:bg-primary-hover"
+                }`}
               >
                 Produkty
                 <ChevronDown
@@ -100,7 +117,11 @@ const Navigation = () => {
                   <Link
                     key={product.path}
                     to={product.path}
-                    className="block px-4 py-2 text-sm text-foreground hover:bg-accent transition-colors duration-200"
+                    className={`block px-4 py-2 text-sm transition-colors duration-200 ${
+                      isActive(product.path)
+                        ? "bg-primary text-primary-foreground font-medium"
+                        : "text-foreground hover:bg-accent"
+                    }`}
                     style={{
                       transitionDelay: productsDropdownOpen
                         ? `${index * 50}ms`
@@ -115,7 +136,11 @@ const Navigation = () => {
 
             <Link
               to="/contact"
-              className="px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-hover transition-all duration-300"
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+                isActive("/contact")
+                  ? "bg-primary-foreground/20 border-b-2 border-primary-foreground"
+                  : "hover:bg-primary-hover"
+              }`}
             >
               Kontakt
             </Link>
@@ -146,10 +171,14 @@ const Navigation = () => {
           <div className="mt-2 space-y-1 border-t border-primary-foreground/20 pt-4">
             <Link
               to="/"
-              className="flex items-center gap-3 px-4 py-3 text-base font-medium hover:bg-primary-foreground/10 rounded-lg transition-all duration-200"
+              className={`flex items-center gap-3 px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ${
+                isActive("/")
+                  ? "bg-primary-foreground/20 border-l-4 border-primary-foreground"
+                  : "hover:bg-primary-foreground/10"
+              }`}
               onClick={() => setIsOpen(false)}
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-primary-foreground/60"></span>
+              <span className={`w-1.5 h-1.5 rounded-full ${isActive("/") ? "bg-primary-foreground" : "bg-primary-foreground/60"}`}></span>
               Domov
             </Link>
             
@@ -157,7 +186,11 @@ const Navigation = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className="flex items-center gap-3 px-4 py-2.5 pl-8 text-sm text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10 rounded-lg transition-all duration-200"
+                className={`flex items-center gap-3 px-4 py-2.5 pl-8 text-sm rounded-lg transition-all duration-200 ${
+                  isActive(link.path)
+                    ? "bg-primary-foreground/20 text-primary-foreground font-medium border-l-4 border-primary-foreground"
+                    : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10"
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
@@ -173,7 +206,11 @@ const Navigation = () => {
                 <Link
                   key={product.path}
                   to={product.path}
-                  className="flex items-center gap-3 px-4 py-2.5 pl-8 text-sm text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10 rounded-lg transition-all duration-200"
+                  className={`flex items-center gap-3 px-4 py-2.5 pl-8 text-sm rounded-lg transition-all duration-200 ${
+                    isActive(product.path)
+                      ? "bg-primary-foreground/20 text-primary-foreground font-medium border-l-4 border-primary-foreground"
+                      : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10"
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {product.label}
@@ -184,10 +221,14 @@ const Navigation = () => {
             <div className="pt-2 border-t border-primary-foreground/20 mt-2">
               <Link
                 to="/contact"
-                className="flex items-center gap-3 px-4 py-3 text-base font-medium hover:bg-primary-foreground/10 rounded-lg transition-all duration-200"
+                className={`flex items-center gap-3 px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ${
+                  isActive("/contact")
+                    ? "bg-primary-foreground/20 border-l-4 border-primary-foreground"
+                    : "hover:bg-primary-foreground/10"
+                }`}
                 onClick={() => setIsOpen(false)}
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-primary-foreground/60"></span>
+                <span className={`w-1.5 h-1.5 rounded-full ${isActive("/contact") ? "bg-primary-foreground" : "bg-primary-foreground/60"}`}></span>
                 Kontakt
               </Link>
             </div>
