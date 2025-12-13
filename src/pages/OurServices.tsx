@@ -100,7 +100,12 @@ const OurServices = () => {
     <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Navigation />
       
-      <HeroCarousel images={carouselImages} />
+      <HeroCarousel 
+        images={carouselImages} 
+        title="Naše služby"
+        subtitle="Kompletný sortiment služieb pre váš domov"
+        showParallax={true}
+      />
 
       <main className="flex-grow">
         <div className="max-w-7xl mx-auto px-4 py-16">
