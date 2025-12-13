@@ -83,21 +83,6 @@ const HeroCarousel = ({
                   className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                 />
                 <div className="absolute inset-0 bg-foreground/40 pointer-events-none" />
-                <div
-                  className="absolute inset-0 flex items-center justify-center pointer-events-none transition-all duration-500 ease-out will-change-transform"
-                  style={
-                    showParallax
-                      ? {
-                          transform: `translateY(${scrollY * 0.5}px)`,
-                          opacity: Math.max(0, 1 - scrollY / 400),
-                        }
-                      : undefined
-                  }
-                >
-                  <div className="text-center text-background">
-                    <h2 className="text-4xl md:text-6xl font-bold mb-4">{image.alt}</h2>
-                  </div>
-                </div>
               </div>
             </CarouselItem>
           ))}
