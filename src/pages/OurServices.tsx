@@ -1,3 +1,4 @@
+import { useState, useEffect, useCallback } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Ruler, Wrench, Truck, Shield, HeadphonesIcon, FileCheck } from "lucide-react";
@@ -5,7 +6,9 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  type CarouselApi,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const carouselImages = [
   {
@@ -27,6 +30,28 @@ const carouselImages = [
 ];
 
 const OurServices = () => {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
+  const scrollTo = useCallback(
+    (index: number) => {
+      api?.scrollTo(index);
+    },
+    [api]
+  );
+
   const services = [
     {
       icon: Ruler,
@@ -66,7 +91,17 @@ const OurServices = () => {
       
       {/* Fullscreen Carousel */}
       <section className="relative h-screen w-screen">
-        <Carousel className="h-full w-full" opts={{ loop: true, dragFree: false }}>
+        <Carousel 
+          className="h-full w-full cursor-grab active:cursor-grabbing" 
+          opts={{ loop: true, dragFree: false }}
+          setApi={setApi}
+          plugins={[
+            Autoplay({
+              delay: 5000,
+              stopOnInteraction: true,
+            }),
+          ]}
+        >
           <CarouselContent className="h-full -ml-0">
             {carouselImages.map((image, index) => (
               <CarouselItem key={index} className="h-full pl-0">
@@ -74,10 +109,10 @@ const OurServices = () => {
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                   />
-                  <div className="absolute inset-0 bg-foreground/40" />
-                  <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-foreground/40 pointer-events-none" />
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                     <div className="text-center text-background">
                       <h2 className="text-4xl md:text-6xl font-bold mb-4">{image.alt}</h2>
                     </div>
@@ -87,9 +122,20 @@ const OurServices = () => {
             ))}
           </CarouselContent>
         </Carousel>
-        {/* Slide indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-          <span className="text-background/80 text-sm">← Swipe to navigate →</span>
+        {/* Dots indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+          {Array.from({ length: count }).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => scrollTo(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === current 
+                  ? "bg-background w-8" 
+                  : "bg-background/50 hover:bg-background/80"
+              }`}
+              aria-label={`Prejsť na slide ${index + 1}`}
+            />
+          ))}
         </div>
       </section>
 
