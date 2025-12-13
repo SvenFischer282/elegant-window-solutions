@@ -68,9 +68,9 @@ const Navigation = () => {
                   <Link
                     key={link.path}
                     to={link.path}
-                    className={`block px-4 py-2 text-sm transition-colors duration-200 ${
+                    className={`flex items-center px-4 py-2 text-sm transition-colors duration-200 ${
                       isActive(link.path)
-                        ? "bg-primary text-primary-foreground font-medium"
+                        ? "text-primary font-medium bg-accent/50 border-l-2 border-primary"
                         : "text-foreground hover:bg-accent"
                     }`}
                     style={{
@@ -117,9 +117,9 @@ const Navigation = () => {
                   <Link
                     key={product.path}
                     to={product.path}
-                    className={`block px-4 py-2 text-sm transition-colors duration-200 ${
+                    className={`flex items-center px-4 py-2 text-sm transition-colors duration-200 ${
                       isActive(product.path)
-                        ? "bg-primary text-primary-foreground font-medium"
+                        ? "text-primary font-medium bg-accent/50 border-l-2 border-primary"
                         : "text-foreground hover:bg-accent"
                     }`}
                     style={{
