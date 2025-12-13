@@ -6,7 +6,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ChevronRight, RectangleHorizontal, DoorOpen, ArrowRightLeft, Box, Building2, Warehouse, Plus, MapPin, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
+import HeroCarousel from "@/components/HeroCarousel";
 import heroImage from "@/assets/hero-windows.jpg";
+import carouselImg1 from "@/assets/nase_sluzby/carousel_imgs/1.jpg";
+import carouselImg2 from "@/assets/nase_sluzby/carousel_imgs/2.jpg";
+import carouselImg3 from "@/assets/nase_sluzby/carousel_imgs/3.jpg";
 
 const Index = () => {
   const products = [
@@ -58,31 +62,15 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${heroImage})`,
-          }}
-        >
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
-            Lorem ipsum dolor sit amet
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto animate-fade-in">
-            Consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          </p>
-          <Link to="/windows">
-            <Button size="lg" className="bg-primary hover:bg-primary-hover text-primary-foreground font-semibold animate-fade-in">
-              Zistite viac o našich produktoch
-              <ChevronRight className="ml-2" size={20} />
-            </Button>
-          </Link>
-        </div>
-      </section>
+      {/* Hero Carousel Section */}
+      <HeroCarousel
+        images={[
+          { src: carouselImg1, alt: "Kvalitné plastové okná" },
+          { src: carouselImg2, alt: "Moderné hliníkové systémy" },
+          { src: carouselImg3, alt: "Profesionálna montáž" },
+        ]}
+        height="calc(100vh - 4rem)"
+      />
 
       {/* About Section */}
       <section className="py-20 bg-background">
