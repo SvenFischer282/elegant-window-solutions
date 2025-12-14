@@ -12,21 +12,21 @@ const DoorsLayout = () => {
     {
       name: "WDS 60mm",
       description: "Montážna šírka - 60mm",
-      image: "/src/assets/product_imgs/doors/wds_60mm.png",
+      image: "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/wds_60mm.png",
     },
     {
       name: "WDS 70mm",
       description: "Montážna šírka - 70mm",
-      image: "/src/assets/product_imgs/doors/wds_70mm.png",
+      image: "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/wds_70mm.png",
     },
     {
       name: "WDS 76mm",
       description: "Montážna šírka - 76mm",
-      image: "/src/assets/product_imgs/doors/wds_76mm.png",
+      image: "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/wds_76mm.png",
     },
   ];
 
-  const images = ["/src/assets/product_imgs/doors/glass_door_image.jpg"];
+  const images = ["https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/glass_door_image.jpg"];
 
   return (
     <div className="min-h-screen flex flex-col bg-muted/30 pt-16">

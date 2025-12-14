@@ -34,7 +34,7 @@ const FacadesLayout = () => {
     },
   ];
 
-  const images = ["/src/assets/product_imgs/facades/luxury-holiday-home.jpg"];
+  const images = ["https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/luxury-holiday-home.jpg"];
 
   return (
     <div className="min-h-screen flex flex-col bg-muted/30 pt-16">

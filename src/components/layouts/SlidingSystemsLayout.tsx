@@ -12,25 +12,22 @@ const SlidingSystemsLayout = () => {
     {
       name: "WDS 60SL okná",
       description: "",
-      image: "/src/assets/product_imgs/sliding_systems/wds_60sl_window.png",
+      image: "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/wds_60sl_window.png",
     },
     {
       name: "WDS 60SL dvere",
       description: "",
-
-      image: "/src/assets/product_imgs/sliding_systems/wds_60sl_door.png",
+      image: "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/wds_60sl_door.png",
     },
     {
       name: "WDS 76SL okná",
       description: "",
-
-      image: "/src/assets/product_imgs/sliding_systems/wds_76sl_window.png",
+      image: "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/wds_76sl_window.png",
     },
     {
       name: "WDS 76SL dvere",
       description: "",
-
-      image: "/src/assets/product_imgs/sliding_systems/wds_76sl_door.png",
+      image: "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/wds_76sl_door.png",
     },
   ];
 

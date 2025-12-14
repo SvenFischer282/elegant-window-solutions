@@ -8,7 +8,8 @@ import {
   Factory,
   FileCheck,
 } from "lucide-react";
-import heroImage from "@/assets/nase_sluzby/carousel_imgs/1.jpg";
+
+const STORAGE_URL = "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna";
 
 const AboutUs = () => {
   const features = [
@@ -59,7 +60,7 @@ const AboutUs = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url(${heroImage})`,
+            backgroundImage: `url(${STORAGE_URL}/1.jpg)`,
           }}
         />
         <div className="absolute inset-0 bg-foreground/50" />

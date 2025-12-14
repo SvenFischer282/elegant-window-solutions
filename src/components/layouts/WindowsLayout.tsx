@@ -21,42 +21,42 @@ const WindowsLayout = () => {
       description: "60 mm | Klasické okná s optimálnou komfortnou výbavou",
       descriptionDetailed:
         "Klasické okná s optimálnou kompletáciou. Päť komôr v profile zaisťuje vysoké tepelnoizolačné vlastnosti pre konštrukcie danej triedy.",
-      image: "src/assets/product_imgs/windows/WDS_5S.png",
+      image: "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/WDS_5S.png",
     },
     {
       name: "WDS 6S",
       description: "70 mm | Vyššia tepelná izolácia a úspora energie",
       descriptionDetailed:
         "6-komorový profilový systém WDS 6S má menšiu výšku a prepúšťa viac svetla. Je vyvinutý na zasklenie obytných budov. Šesť vzduchových komôr zaisťuje spoľahlivú tepelnú izoláciu.",
-      image: "src/assets/product_imgs/windows/WDS_6S.png",
+      image: "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/WDS_6S.png",
     },
     {
       name: "WDS 7S",
       description: "76 mm | Prémiová tepelná a zvuková izolácia",
       descriptionDetailed:
         "6-komorový profilový systém pre výrobu okien a dverí s vysokými tepelnoizolačnými parametrami. Umožňuje výrobu klasických aj neštandardných konštrukcií (trojuholníkové, oblúkové, kruhové).",
-      image: "src/assets/product_imgs/windows/WDS_7S.png",
+      image: "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/WDS_7S.png",
     },
     {
       name: "WDS 8S",
       description: "82 mm | Najvyššia energetická účinnosť",
       descriptionDetailed:
         "6-komorový profilový systém s tromi tesniacimi okruhmi a bezchybným dizajnom – je jedným z najúspornejších okenných systémov. Vhodný pre budovy so zvýšenými nárokmi na úsporu tepla.",
-      image: "src/assets/product_imgs/windows/WDS_8S.png",
+      image: "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/WDS_8S.png",
     },
     {
       name: "WDS 76 AD",
       description: "76 mm | Maximálne presvetlenie interiéru",
       descriptionDetailed:
         "WDS 76 AD má komory na armovanie väčšie ako iné systémy WDS. Okná prepúšťajú viac svetla a umožňujú vytvárať veľkorozmerné konštrukcie. Ideálny na zasklenie domov, terás, veránd.",
-      image: "src/assets/product_imgs/windows/WDS_76_AD.png",
+      image: "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/WDS_76_AD.png",
     },
     {
       name: "WDS 76 MD",
       description: "90 mm | Pre pasívne a nízkoenergetické domy",
       descriptionDetailed:
         "WDS 76 MD má komory na armovanie väčšie ako iné systémy WDS. Okná prepúšťajú viac svetla, umožňujú veľkorozmerné konštrukcie a sú ideálne pre panoramatické zasklenie. Má vysokú úroveň energetickej úspornosti.",
-      image: "src/assets/product_imgs/windows/WDS_76_MD.png",
+      image: "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/WDS_76_MD.png",
     },
   ];
 
