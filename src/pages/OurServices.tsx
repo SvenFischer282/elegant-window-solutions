@@ -1,21 +1,21 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import HeroCarousel from "@/components/HeroCarousel";
-import { 
-  LayoutGrid, 
-  DoorOpen, 
-  Warehouse, 
-  Building2, 
-  SlidersHorizontal, 
+import {
+  LayoutGrid,
+  DoorOpen,
+  Warehouse,
+  Building2,
+  SlidersHorizontal,
   Factory,
   Users,
-  Heart
+  Heart,
 } from "lucide-react";
 
 const carouselImages = [
   {
-    src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80",
-    alt: "Profesionálna montáž okien",
+    src: "/src/assets/product_imgs/doors/glass_door_image.jpg",
+    alt: "Profesionálna montáž",
   },
   {
     src: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=1920&q=80",
@@ -36,27 +36,32 @@ const OurServices = () => {
     {
       icon: LayoutGrid,
       title: "Plastové okná a dvere",
-      description: "Kvalitné plastové okná a dvere z vlastnej výroby s vynikajúcou tepelnou izoláciou.",
+      description:
+        "Kvalitné plastové okná a dvere z vlastnej výroby s vynikajúcou tepelnou izoláciou.",
     },
     {
       icon: DoorOpen,
       title: "Hliníkové okná a dvere",
-      description: "Moderné hliníkové konštrukcie pre náročných zákazníkov s dlhou životnosťou.",
+      description:
+        "Moderné hliníkové konštrukcie pre náročných zákazníkov s dlhou životnosťou.",
     },
     {
       icon: Warehouse,
       title: "Garážové brány",
-      description: "Kvalitné garážové brány s motorovým pohonom a diaľkovým ovládaním.",
+      description:
+        "Kvalitné garážové brány s motorovým pohonom a diaľkovým ovládaním.",
     },
     {
       icon: Building2,
       title: "Fasádne systémy",
-      description: "Moderné fasádne riešenia pre administratívne budovy a obchodné priestory.",
+      description:
+        "Moderné fasádne riešenia pre administratívne budovy a obchodné priestory.",
     },
     {
       icon: SlidersHorizontal,
       title: "Posuvné systémy",
-      description: "Elegantné posuvné dvere a okná pre maximálne využitie priestoru.",
+      description:
+        "Elegantné posuvné dvere a okná pre maximálne využitie priestoru.",
     },
   ];
 
@@ -64,7 +69,8 @@ const OurServices = () => {
     {
       icon: Factory,
       title: "Vlastná výroba",
-      description: "Všetky produkty vyrábame vo vlastných výrobných priestoroch.",
+      description:
+        "Všetky produkty vyrábame vo vlastných výrobných priestoroch.",
     },
     {
       icon: Users,
@@ -74,14 +80,15 @@ const OurServices = () => {
     {
       icon: Heart,
       title: "Individuálny prístup",
-      description: "Vždy načúvame želaniam klientov a premieňame ich predstavy na realitu.",
+      description:
+        "Vždy načúvame želaniam klientov a premieňame ich predstavy na realitu.",
     },
   ];
 
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden pt-16">
       <Navigation />
-      
+
       <HeroCarousel images={carouselImages} height="calc(100vh - 4rem)" />
 
       <main className="flex-grow">
@@ -96,13 +103,14 @@ const OurServices = () => {
                 Dôležitú úlohu pri vytváraní útulného domova zohrávajú okná.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Naša spoločnosť už dvadsať rokov dodáva okenné konštrukcie, ktoré spájajú 
-                praktickosť, ekologickosť a dlhú životnosť.
+                Naša spoločnosť už dvadsať rokov dodáva okenné konštrukcie,
+                ktoré spájajú praktickosť, ekologickosť a dlhú životnosť.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Ponúkame našim klientom kompletný sortiment služieb – od predaja okien vyrobených 
-                vo vlastnej výrobe až po zasklievanie bytov, rodinných domov, lodžií a balkónov 
-                konštrukciami z hliníka a PVC.
+                Ponúkame našim klientom kompletný sortiment služieb – od predaja
+                okien vyrobených vo vlastnej výrobe až po zasklievanie bytov,
+                rodinných domov, lodžií a balkónov konštrukciami z hliníka a
+                PVC.
               </p>
             </div>
           </section>
@@ -123,7 +131,7 @@ const OurServices = () => {
               {/* First row - 3 cards */}
               <div className="grid md:grid-cols-3 gap-6 mb-6">
                 {services.slice(0, 3).map((service, index) => (
-                  <div 
+                  <div
                     key={index}
                     className="p-6 bg-background border border-border rounded-lg hover:border-primary/30 hover:shadow-lg transition-all duration-300"
                   >
@@ -142,7 +150,7 @@ const OurServices = () => {
               {/* Second row - 2 cards centered */}
               <div className="flex justify-center gap-6 flex-wrap">
                 {services.slice(3).map((service, index) => (
-                  <div 
+                  <div
                     key={index + 3}
                     className="p-6 bg-background border border-border rounded-lg hover:border-primary/30 hover:shadow-lg transition-all duration-300 w-full md:w-[calc(33.333%-0.75rem)]"
                   >
@@ -172,14 +180,19 @@ const OurServices = () => {
                   <div className="w-16 h-16 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center">
                     <advantage.icon className="w-8 h-8 text-primary-foreground" />
                   </div>
-                  <h3 className="font-semibold text-foreground mb-2 text-xl">{advantage.title}</h3>
-                  <p className="text-muted-foreground">{advantage.description}</p>
+                  <h3 className="font-semibold text-foreground mb-2 text-xl">
+                    {advantage.title}
+                  </h3>
+                  <p className="text-muted-foreground">
+                    {advantage.description}
+                  </p>
                 </div>
               ))}
             </div>
             <p className="text-center text-lg text-muted-foreground mt-8 max-w-3xl mx-auto">
-              Máme kvalifikovaných pracovníkov, vlastné montážne tímy a vlastnú výrobu – 
-              vždy načúvame želaniam klientov a ich predstavy premieňame na skutočnosť.
+              Máme kvalifikovaných pracovníkov, vlastné montážne tímy a vlastnú
+              výrobu – vždy načúvame želaniam klientov a ich predstavy
+              premieňame na skutočnosť.
             </p>
           </section>
         </div>
