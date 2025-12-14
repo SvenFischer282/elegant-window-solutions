@@ -13,15 +13,14 @@ const AluminumLayout = () => {
       name: "Framex 38",
       description:
         "Montážna hĺbka rámu: 38 mm. Inštalačná (montážna) hĺbka krídla: 46 mm",
-      image: "/src/assets/product_imgs/aluminium/framex_38.png",
+      image: "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/framex_38.png",
     },
   ];
   const technologies2 = [
     {
       name: "Framex FT 72",
       description: "Montážna hĺbka 72 mm.",
-
-      image: "/src/assets/product_imgs/aluminium/framex_ft72.png",
+      image: "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/framex_ft72.png",
     },
   ];
 

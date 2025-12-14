@@ -12,21 +12,23 @@ import {
   Heart,
 } from "lucide-react";
 
+const STORAGE_URL = "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna";
+
 const carouselImages = [
   {
-    src: "/src/assets/product_imgs/doors/glass_door_image.jpg",
+    src: `${STORAGE_URL}/glass_door_image.jpg`,
     alt: "Profesionálna montáž",
   },
   {
-    src: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=1920&q=80",
+    src: `${STORAGE_URL}/1.jpg`,
     alt: "20 rokov skúseností",
   },
   {
-    src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80",
+    src: `${STORAGE_URL}/2.jpg`,
     alt: "Kompletné riešenia pre váš domov",
   },
   {
-    src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80",
+    src: `${STORAGE_URL}/3.jpg`,
     alt: "Kvalitné okná a dvere",
   },
 ];

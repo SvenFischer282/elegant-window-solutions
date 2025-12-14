@@ -16,11 +16,9 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import HeroCarousel from "@/components/HeroCarousel";
-import heroImage from "@/assets/hero-windows.jpg";
-import carouselImg1 from "@/assets/nase_sluzby/carousel_imgs/1.jpg";
-import carouselImg2 from "@/assets/nase_sluzby/carousel_imgs/2.jpg";
-import carouselImg3 from "@/assets/nase_sluzby/carousel_imgs/3.jpg";
 import OurProducts from "@/components/OurProducts";
+
+const STORAGE_URL = "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -82,9 +80,9 @@ const Index = () => {
       {/* Hero Carousel Section */}
       <HeroCarousel
         images={[
-          { src: carouselImg1, alt: "" },
-          { src: carouselImg2, alt: "" },
-          { src: carouselImg3, alt: "" },
+          { src: `${STORAGE_URL}/1.jpg`, alt: "" },
+          { src: `${STORAGE_URL}/2.jpg`, alt: "" },
+          { src: `${STORAGE_URL}/3.jpg`, alt: "" },
         ]}
         height="calc(100vh - 4rem)"
         staticText={{
