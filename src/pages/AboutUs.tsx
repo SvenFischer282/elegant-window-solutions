@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { AnimatedSection } from "@/components/AnimatedSection";
 
 const STORAGE_URL = "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna";
 
@@ -62,62 +63,67 @@ const AboutUs = () => {
 
       <main className="flex-grow">
         {/* About Section */}
-        <section className="section-padding">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center space-y-8">
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Naša spoločnosť pôsobí na trhu od roku 2004. Od momentu
-                založenia je našou hlavnou prioritou{" "}
-                <span className="text-foreground">komfort zákazníka</span>.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Naši zamestnanci vám pomôžu určiť, aké produkty potrebujete, a
-                vyberú riešenie podľa vášho rozpočtu.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Počúvame vaše priania a vytvárame presne také konštrukcie, aké
-                potrebujete. Na to máme spoľahlivého partnera WDS, vlastnú
-                výrobu a kvalifikovaných zamestnancov.
-              </p>
+        <AnimatedSection>
+          <section className="section-padding">
+            <div className="container mx-auto px-4">
+              <div className="max-w-3xl mx-auto text-center space-y-8">
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  Naša spoločnosť pôsobí na trhu od roku 2004. Od momentu
+                  založenia je našou hlavnou prioritou{" "}
+                  <span className="text-foreground">komfort zákazníka</span>.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Naši zamestnanci vám pomôžu určiť, aké produkty potrebujete, a
+                  vyberú riešenie podľa vášho rozpočtu.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Počúvame vaše priania a vytvárame presne také konštrukcie, aké
+                  potrebujete. Na to máme spoľahlivého partnera WDS, vlastnú
+                  výrobu a kvalifikovaných zamestnancov.
+                </p>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </AnimatedSection>
 
         {/* Why Choose Us Section */}
-        <section className="section-padding bg-muted/30">
-          <div className="container mx-auto px-4">
-            <h2 className="text-center mb-16 text-foreground">
-              Prečo si vybrať nás
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-5xl mx-auto">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="group"
-                >
-                  <h3 className="text-lg font-normal mb-3 text-foreground">
-                    {feature.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-                </div>
-              ))}
+        <AnimatedSection>
+          <section className="section-padding bg-muted/30">
+            <div className="container mx-auto px-4">
+              <h2 className="text-center mb-16 text-foreground">
+                Prečo si vybrať nás
+              </h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-5xl mx-auto">
+                {features.map((feature, index) => (
+                  <AnimatedSection key={index} delay={index * 100}>
+                    <div className="group">
+                      <h3 className="text-lg font-normal mb-3 text-foreground">
+                        {feature.title}
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                    </div>
+                  </AnimatedSection>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </AnimatedSection>
 
         {/* Mission Section */}
-        <section className="section-padding">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="mb-8 text-foreground">
-                Pracujeme pre vás
-              </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Spokojní zákazníci sú pre nás tou najväčšou pochvalou.
-              </p>
+        <AnimatedSection>
+          <section className="section-padding">
+            <div className="container mx-auto px-4">
+              <div className="max-w-3xl mx-auto text-center">
+                <h2 className="mb-8 text-foreground">
+                  Pracujeme pre vás
+                </h2>
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  Spokojní zákazníci sú pre nás tou najväčšou pochvalou.
+                </p>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </AnimatedSection>
       </main>
 
       <Footer />

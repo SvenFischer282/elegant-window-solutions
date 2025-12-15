@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { AnimatedSection } from "@/components/AnimatedSection";
 
 const OurProducts = () => {
   const products = [
@@ -40,25 +41,26 @@ const OurProducts = () => {
           Naše produkty
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-7xl mx-auto">
-          {products.map((product) => (
-            <Link
-              key={product.path}
-              to={product.path}
-              className="group relative aspect-[3/4] overflow-hidden"
-            >
-              <img
-                src={product.image}
-                alt={product.title}
-                loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="text-lg font-light tracking-wide text-background">
-                  {product.title}
-                </h3>
-              </div>
-            </Link>
+          {products.map((product, index) => (
+            <AnimatedSection key={product.path} delay={index * 100}>
+              <Link
+                to={product.path}
+                className="group relative aspect-[3/4] overflow-hidden block"
+              >
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-lg font-light tracking-wide text-background">
+                    {product.title}
+                  </h3>
+                </div>
+              </Link>
+            </AnimatedSection>
           ))}
         </div>
       </div>
