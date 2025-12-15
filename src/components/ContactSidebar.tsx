@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Mail, Phone } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+
 const ContactSidebar = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -12,6 +12,7 @@ const ContactSidebar = () => {
     message: "",
   });
   const { toast } = useToast();
+  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
@@ -24,98 +25,86 @@ const ContactSidebar = () => {
       message: "",
     });
   };
+  
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       {/* Contact Form */}
-      <Card className="border-2 shadow-md">
-        <CardHeader className="bg-primary text-primary-foreground">
-          <CardTitle className="text-xl">Kontaktujte nás</CardTitle>
-        </CardHeader>
-        <CardContent className="pt-6">
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <Input
-                placeholder="Meno"
-                value={formData.name}
-                onChange={(e) =>
-                  setFormData({
-                    ...formData,
-                    name: e.target.value,
-                  })
-                }
-                required
-                className="bg-background"
-              />
-            </div>
-            <div>
-              <Input
-                type="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={(e) =>
-                  setFormData({
-                    ...formData,
-                    email: e.target.value,
-                  })
-                }
-                required
-                className="bg-background"
-              />
-            </div>
-            <div>
-              <Textarea
-                placeholder="Správa"
-                value={formData.message}
-                onChange={(e) =>
-                  setFormData({
-                    ...formData,
-                    message: e.target.value,
-                  })
-                }
-                required
-                rows={4}
-                className="bg-background"
-              />
-            </div>
-            <Button
-              type="submit"
-              className="w-full bg-primary hover:bg-primary-hover"
-            >
-              Odoslať
-            </Button>
-          </form>
-        </CardContent>
-      </Card>
+      <div className="bg-muted/30 p-6">
+        <h3 className="text-lg font-normal mb-6 text-foreground">Kontaktujte nás</h3>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <Input
+            placeholder="Meno"
+            value={formData.name}
+            onChange={(e) =>
+              setFormData({
+                ...formData,
+                name: e.target.value,
+              })
+            }
+            required
+            className="bg-background border-0 border-b border-border rounded-none px-0 focus-visible:ring-0 focus-visible:border-foreground transition-colors"
+          />
+          <Input
+            type="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={(e) =>
+              setFormData({
+                ...formData,
+                email: e.target.value,
+              })
+            }
+            required
+            className="bg-background border-0 border-b border-border rounded-none px-0 focus-visible:ring-0 focus-visible:border-foreground transition-colors"
+          />
+          <Textarea
+            placeholder="Správa"
+            value={formData.message}
+            onChange={(e) =>
+              setFormData({
+                ...formData,
+                message: e.target.value,
+              })
+            }
+            required
+            rows={4}
+            className="bg-background border-0 border-b border-border rounded-none px-0 focus-visible:ring-0 focus-visible:border-foreground transition-colors resize-none"
+          />
+          <Button
+            type="submit"
+            className="w-full bg-foreground text-background hover:bg-foreground/90 rounded-none h-10 text-sm tracking-wider uppercase"
+          >
+            Odoslať
+          </Button>
+        </form>
+      </div>
 
       {/* Contact Information */}
-      <Card className="border-2 shadow-md">
-        <CardHeader>
-          <CardTitle className="text-xl">Kontaktné informácie</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
+      <div className="space-y-4">
+        <h3 className="text-lg font-normal text-foreground">Kontaktné údaje</h3>
+        <div className="space-y-4">
           <div className="flex items-start gap-3">
-            <MapPin className="text-primary mt-1 flex-shrink-0" size={20} />
-            <div>
-              <p className="text-sm text-muted-foreground">
-                Slovenská 256, 05 321 Markušovce
-              </p>
-            </div>
+            <MapPin className="text-foreground mt-0.5 flex-shrink-0" size={18} strokeWidth={1.5} />
+            <p className="text-sm text-muted-foreground">
+              Slovenská 256, 05 321 Markušovce
+            </p>
           </div>
           <div className="flex items-start gap-3">
-            <Mail className="text-primary mt-1 flex-shrink-0" size={20} />
-            <div>
-              <a href="mailto:info@company.sk" className="text-sm text-muted-foreground hover:text-primary transition-colors">info@company.sk</a>
-            </div>
+            <Mail className="text-foreground mt-0.5 flex-shrink-0" size={18} strokeWidth={1.5} />
+            <a href="mailto:info@company.sk" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              info@company.sk
+            </a>
           </div>
           <div className="flex items-start gap-3">
-            <Phone className="text-primary mt-1 flex-shrink-0" size={20} />
-            <div>
-              <a href="tel:+421903468472" className="text-sm text-muted-foreground hover:text-primary transition-colors">+421 903 468 472</a>
-            </div>
+            <Phone className="text-foreground mt-0.5 flex-shrink-0" size={18} strokeWidth={1.5} />
+            <a href="tel:+421903468472" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              +421 903 468 472
+            </a>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </div>
   );
 };
+
 export default ContactSidebar;

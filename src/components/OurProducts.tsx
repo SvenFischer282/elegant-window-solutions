@@ -32,28 +32,29 @@ const OurProducts = () => {
         "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
     },
   ];
+  
   return (
-    <section className="py-20 bg-background">
+    <section className="section-padding bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gradient">
+        <h2 className="text-center mb-16 text-foreground">
           Naše produkty
         </h2>
-        <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-7xl mx-auto">
           {products.map((product) => (
             <Link
               key={product.path}
               to={product.path}
-              className="group relative aspect-[3/4] overflow-hidden rounded-lg w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
+              className="group relative aspect-[3/4] overflow-hidden"
             >
               <img
                 src={product.image}
                 alt={product.title}
                 loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-4">
-                <h3 className="text-lg md:text-xl font-semibold text-white">
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-lg font-light tracking-wide text-background">
                   {product.title}
                 </h3>
               </div>

@@ -91,17 +91,46 @@ All colors MUST be HSL.
     @apply bg-background text-foreground font-['Montserrat',sans-serif];
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold;
+  /* Unified Typography Hierarchy */
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-light tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-light tracking-tight;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl font-normal;
+  }
+
+  h4 {
+    @apply text-lg font-normal;
   }
 }
 
 @layer utilities {
+  /* Minimal hover - architectural style */
   .hover-lift {
-    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+    @apply transition-all duration-500 hover:-translate-y-0.5;
   }
 
   .text-gradient {
     @apply bg-gradient-to-r from-primary to-primary-hover bg-clip-text text-transparent;
+  }
+
+  /* Section spacing - unified premium feel */
+  .section-padding {
+    @apply py-24 md:py-32 lg:py-40;
+  }
+
+  /* Architectural card style - minimal borders */
+  .card-architectural {
+    @apply bg-background border-0 rounded-none transition-all duration-500;
+  }
+
+  /* Premium text spacing */
+  .text-premium {
+    @apply leading-relaxed tracking-wide;
   }
 }

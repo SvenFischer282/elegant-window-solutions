@@ -1,16 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import HeroCarousel from "@/components/HeroCarousel";
-import {
-  LayoutGrid,
-  DoorOpen,
-  Warehouse,
-  Building2,
-  SlidersHorizontal,
-  Factory,
-  Users,
-  Heart,
-} from "lucide-react";
 
 const STORAGE_URL = "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna";
 
@@ -36,31 +26,26 @@ const carouselImages = [
 const OurServices = () => {
   const services = [
     {
-      icon: LayoutGrid,
       title: "Plastové okná a dvere",
       description:
         "Kvalitné plastové okná a dvere z vlastnej výroby s vynikajúcou tepelnou izoláciou.",
     },
     {
-      icon: DoorOpen,
       title: "Hliníkové okná a dvere",
       description:
         "Moderné hliníkové konštrukcie pre náročných zákazníkov s dlhou životnosťou.",
     },
     {
-      icon: Warehouse,
       title: "Garážové brány",
       description:
         "Kvalitné garážové brány s motorovým pohonom a diaľkovým ovládaním.",
     },
     {
-      icon: Building2,
       title: "Fasádne systémy",
       description:
         "Moderné fasádne riešenia pre administratívne budovy a obchodné priestory.",
     },
     {
-      icon: SlidersHorizontal,
       title: "Posuvné systémy",
       description:
         "Elegantné posuvné dvere a okná pre maximálne využitie priestoru.",
@@ -69,18 +54,15 @@ const OurServices = () => {
 
   const advantages = [
     {
-      icon: Factory,
       title: "Vlastná výroba",
       description:
         "Všetky produkty vyrábame vo vlastných výrobných priestoroch.",
     },
     {
-      icon: Users,
       title: "Vlastné montážne tímy",
       description: "Kvalifikovaní pracovníci zabezpečujú profesionálnu montáž.",
     },
     {
-      icon: Heart,
       title: "Individuálny prístup",
       description:
         "Vždy načúvame želaniam klientov a premieňame ich predstavy na realitu.",
@@ -94,110 +76,82 @@ const OurServices = () => {
       <HeroCarousel images={carouselImages} height="calc(100vh - 4rem)" />
 
       <main className="flex-grow">
-        <div className="max-w-7xl mx-auto px-4 py-16">
-          {/* Intro Section */}
-          <section className="mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 text-foreground">
-              Naše služby
-            </h1>
-            <div className="max-w-4xl mx-auto space-y-6 text-center">
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Dôležitú úlohu pri vytváraní útulného domova zohrávajú okná.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Naša spoločnosť už dvadsať rokov dodáva okenné konštrukcie,
-                ktoré spájajú praktickosť, ekologickosť a dlhú životnosť.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Ponúkame našim klientom kompletný sortiment služieb – od predaja
-                okien vyrobených vo vlastnej výrobe až po zasklievanie bytov,
-                rodinných domov, lodžií a balkónov konštrukciami z hliníka a
-                PVC.
-              </p>
+        {/* Intro Section */}
+        <section className="section-padding">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <h1 className="mb-8 text-foreground">Naše služby</h1>
+              <div className="space-y-6">
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  Dôležitú úlohu pri vytváraní útulného domova zohrávajú okná.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Naša spoločnosť už dvadsať rokov dodáva okenné konštrukcie,
+                  ktoré spájajú praktickosť, ekologickosť a dlhú životnosť.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Ponúkame našim klientom kompletný sortiment služieb – od predaja
+                  okien vyrobených vo vlastnej výrobe až po zasklievanie bytov,
+                  rodinných domov, lodžií a balkónov konštrukciami z hliníka a
+                  PVC.
+                </p>
+              </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Services Header */}
-          <section className="mb-8">
-            <h2 className="text-3xl font-bold text-center mb-4 text-foreground">
-              Ponúkame kompletný sortiment služieb
+        {/* Services Grid */}
+        <section className="section-padding bg-muted/30">
+          <div className="container mx-auto px-4">
+            <h2 className="text-center mb-4 text-foreground">
+              Kompletný sortiment služieb
             </h2>
-            <p className="text-center text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-center text-muted-foreground mb-16">
               Výroba a montáž konštrukcií z PVC a hliníka
             </p>
-          </section>
-
-          {/* Services Grid */}
-          <section className="mb-16">
-            <div className="max-w-5xl mx-auto">
-              {/* First row - 3 cards */}
-              <div className="grid md:grid-cols-3 gap-6 mb-6">
-                {services.slice(0, 3).map((service, index) => (
-                  <div
-                    key={index}
-                    className="p-6 bg-background border border-border rounded-lg hover:border-primary/30 hover:shadow-lg transition-all duration-300"
-                  >
-                    <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center mb-4">
-                      <service.icon className="w-7 h-7 text-primary-foreground" />
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2 text-foreground">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      {service.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              {/* Second row - 2 cards centered */}
-              <div className="flex justify-center gap-6 flex-wrap">
-                {services.slice(3).map((service, index) => (
-                  <div
-                    key={index + 3}
-                    className="p-6 bg-background border border-border rounded-lg hover:border-primary/30 hover:shadow-lg transition-all duration-300 w-full md:w-[calc(33.333%-0.75rem)]"
-                  >
-                    <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center mb-4">
-                      <service.icon className="w-7 h-7 text-primary-foreground" />
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2 text-foreground">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      {service.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-5xl mx-auto">
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  className="group"
+                >
+                  <h3 className="text-lg font-normal mb-3 text-foreground">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Why Us Section */}
-          <section className="bg-primary/5 rounded-xl p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
+        {/* Why Us Section */}
+        <section className="section-padding">
+          <div className="container mx-auto px-4">
+            <h2 className="text-center mb-16 text-foreground">
               Prečo si vybrať nás
             </h2>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-x-12 gap-y-12 max-w-4xl mx-auto">
               {advantages.map((advantage, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-16 h-16 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center">
-                    <advantage.icon className="w-8 h-8 text-primary-foreground" />
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2 text-xl">
+                  <h3 className="font-normal text-foreground mb-3">
                     {advantage.title}
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground leading-relaxed">
                     {advantage.description}
                   </p>
                 </div>
               ))}
             </div>
-            <p className="text-center text-lg text-muted-foreground mt-8 max-w-3xl mx-auto">
+            <p className="text-center text-lg text-muted-foreground mt-16 max-w-3xl mx-auto leading-relaxed">
               Máme kvalifikovaných pracovníkov, vlastné montážne tímy a vlastnú
               výrobu – vždy načúvame želaniam klientov a ich predstavy
               premieňame na skutočnosť.
             </p>
-          </section>
-        </div>
+          </div>
+        </section>
       </main>
 
       <Footer />
