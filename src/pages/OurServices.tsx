@@ -3,16 +3,13 @@ import Footer from "@/components/Footer";
 import HeroCarousel from "@/components/HeroCarousel";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
-const STORAGE_URL = "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna";
+const STORAGE_URL =
+  "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna";
 
 const carouselImages = [
   {
-    src: `${STORAGE_URL}/glass_door_image.jpg`,
-    alt: "Profesionálna montáž",
-  },
-  {
     src: `${STORAGE_URL}/1.jpg`,
-    alt: "20 rokov skúseností",
+    alt: "Profesionálna montáž",
   },
   {
     src: `${STORAGE_URL}/2.jpg`,
@@ -92,10 +89,10 @@ const OurServices = () => {
                     ktoré spájajú praktickosť, ekologickosť a dlhú životnosť.
                   </p>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    Ponúkame našim klientom kompletný sortiment služieb – od predaja
-                    okien vyrobených vo vlastnej výrobe až po zasklievanie bytov,
-                    rodinných domov, lodžií a balkónov konštrukciami z hliníka a
-                    PVC.
+                    Ponúkame našim klientom kompletný sortiment služieb – od
+                    predaja okien vyrobených vo vlastnej výrobe až po
+                    zasklievanie bytov, rodinných domov, lodžií a balkónov
+                    konštrukciami z hliníka a PVC.
                   </p>
                 </div>
               </div>
@@ -154,9 +151,9 @@ const OurServices = () => {
               </div>
               <AnimatedSection delay={500}>
                 <p className="text-center text-lg text-muted-foreground mt-16 max-w-3xl mx-auto leading-relaxed">
-                  Máme kvalifikovaných pracovníkov, vlastné montážne tímy a vlastnú
-                  výrobu – vždy načúvame želaniam klientov a ich predstavy
-                  premieňame na skutočnosť.
+                  Máme kvalifikovaných pracovníkov, vlastné montážne tímy a
+                  vlastnú výrobu – vždy načúvame želaniam klientov a ich
+                  predstavy premieňame na skutočnosť.
                 </p>
               </AnimatedSection>
             </div>
