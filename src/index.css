@@ -38,7 +38,7 @@ All colors MUST be HSL.
     --input: 0 0% 90%;
     --ring: 150 100% 25%;
 
-    --radius: 0.5rem;
+    --radius: 0;
 
     --gradient-primary: linear-gradient(135deg, hsl(150 100% 25%), hsl(150 100% 30%));
     --shadow-elegant: 0 4px 20px -4px hsl(150 100% 25% / 0.15);
