@@ -13,6 +13,7 @@ const Footer = () => {
               <p>Slovenská 256, 053 21 Markušovce</p>
               <p>IČO: 50314262</p>
               <p>DIČ: 2120281427</p>
+              <p>IČ DPH: SK2120281427</p>
               <p className="pt-2 text-background/50 text-xs">
                 Zapísaná v Obchodnom registri Mestského súdu Košice, oddiel: Sro, vložka č.: 39196/V
               </p>

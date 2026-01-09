@@ -31,16 +31,18 @@ const PrivacyPolicy = () => {
                   <p className="text-foreground">
                     <strong>ARGO SNV s.r.o.</strong>
                     <br />
-                    Slovenská 256, 05 321 Markušovce
+                    Slovenská 256, 053 21 Markušovce
                     <br />
-                    IČO: [DOPLŇTE IČO]
+                    IČO: 50314262
                     <br />
-                    DIČ: [DOPLŇTE DIČ]
+                    DIČ: 2120281427
                     <br />
-                    Zapísaná v Obchodnom registri Okresného súdu [DOPLŇTE], oddiel: Sro, vložka č.: [DOPLŇTE]
+                    IČ DPH: SK2120281427 (podľa §4, registrácia od 1.7.2021)
+                    <br />
+                    Zapísaná v Obchodnom registri Mestského súdu Košice, oddiel: Sro, vložka č.: 39196/V
                   </p>
                   <p className="text-muted-foreground mt-4">
-                    Email: info@company.sk
+                    Email: info@argosnv.sk
                     <br />
                     Telefón: +421 903 468 472
                   </p>
@@ -151,7 +153,7 @@ const PrivacyPolicy = () => {
                   <li><strong>Právo odvolať súhlas</strong> – ak je spracúvanie založené na súhlase, môžete ho kedykoľvek odvolať</li>
                 </ul>
                 <p className="text-muted-foreground leading-relaxed">
-                  Svoje práva môžete uplatniť zaslaním žiadosti na email: info@company.sk
+                  Svoje práva môžete uplatniť zaslaním žiadosti na email: info@argosnv.sk
                 </p>
               </section>
 

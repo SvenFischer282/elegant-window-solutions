@@ -35,15 +35,15 @@ const TermsConditions = () => {
                     <br />
                     ARGO SNV s.r.o.
                     <br />
-                    Slovenská 256, 05 321 Markušovce
+                    Slovenská 256, 053 21 Markušovce
                     <br />
-                    IČO: [DOPLŇTE IČO]
+                    IČO: 50314262
                     <br />
-                    DIČ: [DOPLŇTE DIČ]
+                    DIČ: 2120281427
                     <br />
-                    IČ DPH: [DOPLŇTE ak je platca DPH]
+                    IČ DPH: SK2120281427 (podľa §4, registrácia od 1.7.2021)
                     <br />
-                    Zapísaná v Obchodnom registri Okresného súdu [DOPLŇTE], oddiel: Sro, vložka č.: [DOPLŇTE]
+                    Zapísaná v Obchodnom registri Mestského súdu Košice, oddiel: Sro, vložka č.: 39196/V
                     <br />
                     Bankové spojenie: [DOPLŇTE]
                     <br />
