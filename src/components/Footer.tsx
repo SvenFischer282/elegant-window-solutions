@@ -10,11 +10,11 @@ const Footer = () => {
           <div className="md:col-span-2">
             <h3 className="text-xl font-light tracking-wide mb-6">ARGO SNV s.r.o.</h3>
             <div className="text-background/70 text-sm space-y-1">
-              <p>Slovenská 256, 05 321 Markušovce</p>
-              <p>IČO: [DOPLŇTE IČO]</p>
-              <p>DIČ: [DOPLŇTE DIČ]</p>
+              <p>Slovenská 256, 053 21 Markušovce</p>
+              <p>IČO: 50314262</p>
+              <p>DIČ: 2120281427</p>
               <p className="pt-2 text-background/50 text-xs">
-                Zapísaná v Obchodnom registri Okresného súdu [DOPLŇTE], oddiel: Sro, vložka č.: [DOPLŇTE]
+                Zapísaná v Obchodnom registri Mestského súdu Košice, oddiel: Sro, vložka č.: 39196/V
               </p>
             </div>
             <p className="text-background/70 leading-relaxed text-sm mt-4">
