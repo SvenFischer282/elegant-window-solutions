@@ -1,14 +1,23 @@
 import { Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="bg-foreground text-background">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {/* Company Info */}
-          <div>
-            <h3 className="text-xl font-light tracking-wide mb-6">ARGO SNV</h3>
-            <p className="text-background/70 leading-relaxed text-sm">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          {/* Company Info - Impressum */}
+          <div className="md:col-span-2">
+            <h3 className="text-xl font-light tracking-wide mb-6">ARGO SNV s.r.o.</h3>
+            <div className="text-background/70 text-sm space-y-1">
+              <p>Slovenská 256, 05 321 Markušovce</p>
+              <p>IČO: [DOPLŇTE IČO]</p>
+              <p>DIČ: [DOPLŇTE DIČ]</p>
+              <p className="pt-2 text-background/50 text-xs">
+                Zapísaná v Obchodnom registri Okresného súdu [DOPLŇTE], oddiel: Sro, vložka č.: [DOPLŇTE]
+              </p>
+            </div>
+            <p className="text-background/70 leading-relaxed text-sm mt-4">
               Sme slovenská spoločnosť s viac ako 20-ročnými skúsenosťami vo výrobe a montáži okien, dverí a fasádnych systémov.
             </p>
           </div>
@@ -36,16 +45,29 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-light tracking-wide mb-6">Navigácia</h3>
             <div className="space-y-3 text-background/70 text-sm">
-              <a href="/about-us" className="block hover:text-background transition-colors">O nás</a>
-              <a href="/our-services" className="block hover:text-background transition-colors">Naše služby</a>
-              <a href="/production" className="block hover:text-background transition-colors">Produkcia</a>
-              <a href="/contact" className="block hover:text-background transition-colors">Kontakt</a>
+              <Link to="/about-us" className="block hover:text-background transition-colors">O nás</Link>
+              <Link to="/our-services" className="block hover:text-background transition-colors">Naše služby</Link>
+              <Link to="/production" className="block hover:text-background transition-colors">Produkcia</Link>
+              <Link to="/contact" className="block hover:text-background transition-colors">Kontakt</Link>
+            </div>
+            
+            {/* Legal Links */}
+            <div className="mt-6 pt-6 border-t border-background/20">
+              <h4 className="text-sm font-light tracking-wide mb-3 text-background/50">Právne informácie</h4>
+              <div className="space-y-2 text-background/60 text-xs">
+                <Link to="/privacy-policy" className="block hover:text-background transition-colors">
+                  Zásady ochrany osobných údajov
+                </Link>
+                <Link to="/terms-conditions" className="block hover:text-background transition-colors">
+                  Všeobecné obchodné podmienky
+                </Link>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="border-t border-background/20 mt-12 pt-8 text-center text-background/50 text-sm">
-          <p>&copy; {new Date().getFullYear()} ARGO SNV</p>
+          <p>&copy; {new Date().getFullYear()} ARGO SNV s.r.o. Všetky práva vyhradené.</p>
           <p className="mt-2">
             Created by{" "}
             <a 

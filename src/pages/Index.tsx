@@ -4,6 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import GDPRFormConsent from "@/components/GDPRFormConsent";
 
 import {
   Accordion,
@@ -25,15 +26,25 @@ const ContactForm = () => {
     email: "",
     message: "",
   });
+  const [gdprConsent, setGdprConsent] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!gdprConsent) {
+      toast({
+        title: "Súhlas je povinný",
+        description: "Pre odoslanie formulára musíte súhlasiť so spracovaním osobných údajov.",
+        variant: "destructive",
+      });
+      return;
+    }
     toast({
       title: "Správa odoslaná",
       description: "Čoskoro vás budeme kontaktovať.",
     });
     setFormData({ name: "", email: "", message: "" });
+    setGdprConsent(false);
   };
 
   return (
@@ -60,6 +71,10 @@ const ContactForm = () => {
         required
         rows={4}
         className="bg-background border-0 border-b border-border rounded-none px-0 focus-visible:ring-0 focus-visible:border-foreground transition-colors resize-none"
+      />
+      <GDPRFormConsent
+        checked={gdprConsent}
+        onCheckedChange={(checked) => setGdprConsent(checked as boolean)}
       />
       <Button
         type="submit"
