@@ -1,8 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ContactSidebar from "@/components/ContactSidebar";
 import ProductBreadcrumb from "@/components/product/ProductBreadcrumb";
-import ProductHero from "@/components/product/ProductHero";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
 const FacadesLayout = () => {
@@ -12,135 +10,128 @@ const FacadesLayout = () => {
     "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/luxury-holiday-home.jpg",
   ];
 
+  const benefits = [
+    { title: "Krásny vonkajší vzhľad", description: "Originálny a unikátny dizajn budovy" },
+    { title: "Vizuálne zväčšenie priestoru", description: "Optické rozšírenie interiéru" },
+    { title: "Maximálne presvetlenie", description: "Lepšie prepúšťanie svetla do miestnosti" },
+    { title: "Úspora energie", description: "Zníženie spotreby elektrickej energie" },
+  ];
+
   return (
     <div className="min-h-screen flex flex-col bg-background pt-16">
       <Navigation />
 
       <main className="flex-1">
-        <div className="container mx-auto px-4 py-16 md:py-24">
-          <AnimatedSection>
-            <ProductBreadcrumb title={title} />
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
-            <div className="lg:col-span-2 space-y-16">
-              <AnimatedSection delay={100}>
-                <ProductHero image={images[0]} alt={title} />
+        {/* Hero Section */}
+        <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
+          <img
+            src={images[0]}
+            alt={title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16">
+            <div className="container mx-auto">
+              <AnimatedSection>
+                <ProductBreadcrumb title={title} />
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-foreground mt-4">
+                  {title}
+                </h1>
               </AnimatedSection>
+            </div>
+          </div>
+        </section>
 
-              <AnimatedSection delay={200}>
+        {/* Content Section */}
+        <section className="section-padding">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection delay={100}>
                 <div className="space-y-6">
-                  <h2 className="text-foreground">Fasádne Zasklenie</h2>
+                  <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+                    Pri výstavbe budov sa fasádne zasklenie používa čoraz častejšie. Fasáda nielenže umožňuje dosiahnuť krásny vonkajší vzhľad stavby, ale je aj praktická zvnútra.
+                  </p>
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
 
-                  <div className="space-y-4">
-                    <p className="text-lg text-muted-foreground leading-relaxed">
-                      Pri výstavbe budov sa{" "}
-                      <span className="text-foreground font-medium">
-                        fasádne zasklenie
-                      </span>{" "}
-                      používa čoraz častejšie.
+        {/* Benefits Section */}
+        <section className="section-padding bg-muted/30">
+          <div className="container mx-auto px-4">
+            <AnimatedSection delay={200}>
+              <h2 className="text-center mb-16 text-foreground">
+                Výhody fasádneho zasklenia
+              </h2>
+            </AnimatedSection>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+              {benefits.map((item, index) => (
+                <AnimatedSection key={index} delay={250 + index * 50}>
+                  <div className="text-center">
+                    <h3 className="text-foreground mb-2">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Applications Section */}
+        <section className="section-padding">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection delay={300}>
+                <h2 className="mb-8 text-foreground">Široké uplatnenie</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                  Takéto zasklenie sa široko používa ako v obytných domoch, tak aj v biznis centrách, verejných a administratívnych budovách, ako aj v podnikoch.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Vysoké okná a sklené strechy úplne menia budovu zvonka i zvnútra a premieňajú ju na unikátnu a neopakovateľnú stavbu.
+                </p>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* Quote Section */}
+        <section className="section-padding bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <AnimatedSection delay={350}>
+                <blockquote className="text-xl md:text-2xl text-foreground/80 italic leading-relaxed">
+                  "Výberom fasádneho zasklenia majitelia nehnuteľností dosahujú dvojitý výsledok – originalitu budovy navonok a exkluzivitu interiéru zvnútra."
+                </blockquote>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* Materials Section */}
+        <section className="section-padding">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection delay={400}>
+                <h2 className="mb-8 text-foreground">Materiály a alternatívy</h2>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="p-8 bg-muted/30 border-l-2 border-primary">
+                    <h3 className="text-foreground mb-3">Hliníkové fasádne systémy</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Vynikajúca alternatíva k oceľovým konštrukciám s vysokou odolnosťou a moderným vzhľadom.
                     </p>
-
-                    <p className="text-lg text-muted-foreground leading-relaxed">
-                      Dôvodom je, že fasáda nielenže umožňuje dosiahnuť{" "}
-                      <span className="text-foreground font-medium">
-                        krásny vonkajší vzhľad
-                      </span>{" "}
-                      stavby, ale je aj praktická zvnútra:{" "}
-                      <span className="text-foreground font-medium">
-                        vizuálne zväčšuje priestor
-                      </span>
-                      , lepšie prepúšťa svetlo do miestnosti a{" "}
-                      <span className="text-foreground font-medium">
-                        šetrí elektrickú energiu
-                      </span>
-                      .
+                  </div>
+                  <div className="p-8 bg-muted/30 border-l-2 border-primary">
+                    <h3 className="text-foreground mb-3">PVC panely</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Špeciálne panely z plastu, ktoré sa používajú pre súkromné domy.
                     </p>
                   </div>
                 </div>
               </AnimatedSection>
-
-              <AnimatedSection delay={300}>
-                <div className="space-y-6">
-                  <h3 className="text-foreground">Široké Uplatnenie</h3>
-
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Takéto zasklenie sa široko používa ako v{" "}
-                    <span className="text-foreground font-medium">
-                      obytných domoch
-                    </span>
-                    , tak aj v{" "}
-                    <span className="text-foreground font-medium">
-                      biznis centrách
-                    </span>
-                    ,{" "}
-                    <span className="text-foreground font-medium">verejných</span>{" "}
-                    a{" "}
-                    <span className="text-foreground font-medium">
-                      administratívnych budovách
-                    </span>
-                    , ako aj v podnikoch.
-                  </p>
-
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Vysoké okná a{" "}
-                    <span className="text-foreground font-medium">
-                      sklené strechy
-                    </span>{" "}
-                    úplne menia budovu zvonka i zvnútra a premieňajú ju na{" "}
-                    <span className="text-foreground font-medium">
-                      unikátnu a neopakovateľnú stavbu
-                    </span>
-                    .
-                  </p>
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection delay={350}>
-                <blockquote className="border-l-2 border-primary pl-8 my-8 italic text-xl text-foreground/80">
-                  Výberom fasádneho zasklenia majitelia nehnuteľností dosahujú
-                  dvojitý výsledok – originalitu budovy navonok a exkluzivitu
-                  interiéru zvnútra.
-                </blockquote>
-              </AnimatedSection>
-
-              <AnimatedSection delay={400}>
-                <div className="space-y-6">
-                  <h3 className="text-foreground">Materiály a Alternatívy</h3>
-
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    <span className="text-foreground font-medium">
-                      Hliníkové fasádne systémy
-                    </span>{" "}
-                    sú vynikajúcou alternatívou k oceľovým konštrukciám.
-                  </p>
-
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Taktiež vyrábame{" "}
-                    <span className="text-foreground font-medium">
-                      panely z plastu
-                    </span>{" "}
-                    – špeciálne{" "}
-                    <span className="text-foreground font-medium">PVC panely</span>
-                    , ktoré sa používajú pre{" "}
-                    <span className="text-foreground font-medium">
-                      súkromné domy
-                    </span>
-                    .
-                  </p>
-                </div>
-              </AnimatedSection>
-            </div>
-
-            <div className="lg:col-span-1">
-              <div className="sticky top-24">
-                <AnimatedSection delay={200} direction="right">
-                  <ContactSidebar />
-                </AnimatedSection>
-              </div>
             </div>
           </div>
-        </div>
+        </section>
       </main>
 
       <Footer />

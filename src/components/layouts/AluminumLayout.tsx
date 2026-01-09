@@ -1,8 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ContactSidebar from "@/components/ContactSidebar";
 import ProductBreadcrumb from "@/components/product/ProductBreadcrumb";
-import ProductHero from "@/components/product/ProductHero";
 import TechnologyGrid from "@/components/product/TechnologyGrid";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
@@ -32,187 +30,176 @@ const AluminumLayout = () => {
     "https://vesnyanka.com.ua/wp-content/uploads/2025/03/DALL%C2%B7E-2025-03-31-21.43.31-A-modern-aluminum-and-glass-door-designed-for-contemporary-homes-and-commercial-spaces.-The-door-features-a-sleek-minimalistic-frame-with-a-large-gla.webp",
   ];
 
+  const products = [
+    "Fasády",
+    "Kancelárske priečky",
+    "Okná",
+    "Dvere a iné hliníkové výrobky"
+  ];
+
+  const framexFeatures = [
+    { name: "Ľahkosť a pevnosť", description: "Ideálne pre trvanlivé a ľahké konštrukcie" },
+    { name: "Odolnosť proti korózii", description: "Eloxácia alebo práškové lakovanie" },
+    { name: "Estetický vzhľad", description: "Rozmanitosť farieb a textúr" },
+    { name: "Ekologickosť", description: "Plne recyklovateľný materiál" },
+  ];
+
   return (
     <div className="min-h-screen flex flex-col bg-background pt-16">
       <Navigation />
 
       <main className="flex-1">
-        <div className="container mx-auto px-4 py-16 md:py-24">
-          <AnimatedSection>
-            <ProductBreadcrumb title={title} />
-          </AnimatedSection>
+        {/* Hero Section */}
+        <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
+          <img
+            src={images[0]}
+            alt={title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16">
+            <div className="container mx-auto">
+              <AnimatedSection>
+                <ProductBreadcrumb title={title} />
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-foreground mt-4">
+                  Hliníkové konštrukcie
+                </h1>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
-            <div className="lg:col-span-2 space-y-16">
+        {/* Content Section */}
+        <section className="section-padding">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
               <AnimatedSection delay={100}>
-                <ProductHero image={images[0]} alt={title} />
-              </AnimatedSection>
-
-              <AnimatedSection delay={200}>
                 <div className="space-y-6">
-                  <h2 className="text-foreground">Hliníkové Konštrukcie</h2>
-
-                  <div className="space-y-4">
-                    <p className="text-lg text-muted-foreground leading-relaxed">
-                      <span className="text-foreground font-medium">
-                        Ľahké hliníkové systémy
-                      </span>{" "}
-                      sú ideálnou voľbou, ak potrebujete zabezpečiť maximálne
-                      prirodzené osvetlenie a nemáte prísne požiadavky na tepelnú
-                      izoláciu.
-                    </p>
-                  </div>
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection delay={300}>
-                <div className="space-y-6">
-                  <h3 className="text-foreground">
-                    Náš Sortiment Hliníkových Produktov
-                  </h3>
-
-                  <ul className="text-lg text-muted-foreground leading-relaxed ml-6 space-y-2 list-disc">
-                    <li>Fasády</li>
-                    <li>Kancelárske priečky</li>
-                    <li>Okná</li>
-                    <li>Dvere a iné hliníkové výrobky</li>
-                  </ul>
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection delay={350}>
-                <div className="space-y-6">
-                  <h3 className="text-foreground">Hliníkové Okná</h3>
-
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Hliníkové okná patria k najobľúbenejším typom okenných
-                    konštrukcií. Vyznačujú sa vysokou odolnosťou proti korózii, sú
-                    trvácne a praktické.
+                  <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+                    Ľahké hliníkové systémy sú ideálnou voľbou, ak potrebujete zabezpečiť maximálne prirodzené osvetlenie a nemáte prísne požiadavky na tepelnú izoláciu.
                   </p>
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection delay={400}>
-                <div className="space-y-6">
-                  <h3 className="text-foreground">
-                    Rozdiel medzi „Studeným" a „Teplým" Hliníkom
-                  </h3>
-
-                  <ul className="text-lg text-muted-foreground leading-relaxed ml-6 space-y-4 list-disc">
-                    <li>
-                      <span className="text-foreground font-medium">
-                        „Studený" hliník
-                      </span>{" "}
-                      – Ideálny pre balkóny, verandy, altánky a terasy. Cenovo
-                      dostupné klasické posuvné systémy.
-                    </li>
-                    <li>
-                      <span className="text-foreground font-medium">
-                        „Teplý" hliník
-                      </span>{" "}
-                      – Vysoké tepelno- a zvukovoizolačné vlastnosti. Najlepšie
-                      riešenie pre vykurované miestnosti.
-                    </li>
-                  </ul>
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection delay={450}>
-                <div className="space-y-6">
-                  <h3 className="text-foreground">Hliníkové Dvere a Priečky</h3>
-
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Hliníkové dvere majú množstvo výhod: odolnosť proti poškodeniu,
-                    minimalistický vzhľad, nenáročnosť na údržbu a možnosť
-                    farebného spracovania.
-                  </p>
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection delay={500}>
-                <div className="space-y-6">
-                  <h3 className="text-foreground">Hliníkový Profil Framex</h3>
-
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Pracujeme s hliníkovým profilom{" "}
-                    <span className="text-foreground font-medium">Framex</span> –
-                    kvalitný konštrukčný profil certifikovaný podľa európskych
-                    noriem.
-                  </p>
-
-                  <ul className="text-lg text-muted-foreground leading-relaxed ml-6 space-y-2 list-disc">
-                    <li>
-                      <span className="text-foreground font-medium">
-                        Ľahkosť a pevnosť
-                      </span>{" "}
-                      – Ideálne pre trvanlivé a ľahké konštrukcie
-                    </li>
-                    <li>
-                      <span className="text-foreground font-medium">
-                        Odolnosť proti korózii
-                      </span>{" "}
-                      – Eloxácia alebo práškové lakovanie
-                    </li>
-                    <li>
-                      <span className="text-foreground font-medium">
-                        Estetický vzhľad
-                      </span>{" "}
-                      – Rozmanitosť farieb a textúr
-                    </li>
-                    <li>
-                      <span className="text-foreground font-medium">
-                        Ekologickosť
-                      </span>{" "}
-                      – Plne recyklovateľný materiál
-                    </li>
-                  </ul>
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection delay={550}>
-                <div className="space-y-6">
-                  <h3 className="text-foreground">
-                    Framex 38 – Studený Hliníkový Systém
-                  </h3>
-
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Studený hliníkový systém určený pre konštrukcie s nízkymi
-                    požiadavkami na tepelnú izoláciu – nevykurované miestnosti,
-                    interiérové priečky alebo výklady.
-                  </p>
-
-                  <TechnologyGrid technologies={technologies1} />
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection delay={600}>
-                <div className="space-y-6">
-                  <h3 className="text-foreground">
-                    Framex FT 72 – Teplý Hliníkový Systém
-                  </h3>
-
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    <span className="text-foreground font-medium">
-                      Framex FT 72
-                    </span>{" "}
-                    je spoľahlivý a energeticky účinný teplý hliníkový okenný a
-                    dverový systém s vysokou tepelnou a zvukovou izoláciou.
-                  </p>
-
-                  <TechnologyGrid technologies={technologies2} />
                 </div>
               </AnimatedSection>
             </div>
+          </div>
+        </section>
 
-            <div className="lg:col-span-1">
-              <div className="sticky top-24">
-                <AnimatedSection delay={200} direction="right">
-                  <ContactSidebar />
+        {/* Products Section */}
+        <section className="section-padding bg-muted/30">
+          <div className="container mx-auto px-4">
+            <AnimatedSection delay={200}>
+              <h2 className="text-center mb-16 text-foreground">
+                Náš sortiment
+              </h2>
+            </AnimatedSection>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {products.map((product, index) => (
+                <AnimatedSection key={index} delay={250 + index * 50}>
+                  <div className="text-center p-6 bg-background">
+                    <p className="text-foreground font-medium">{product}</p>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Cold vs Warm Section */}
+        <section className="section-padding">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <AnimatedSection delay={300}>
+                <h2 className="text-center mb-16 text-foreground">
+                  Studený vs. Teplý hliník
+                </h2>
+              </AnimatedSection>
+              <div className="grid md:grid-cols-2 gap-12">
+                <AnimatedSection delay={350}>
+                  <div className="p-8 bg-muted/30 border-l-2 border-primary h-full">
+                    <h3 className="text-foreground mb-4">„Studený" hliník</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Ideálny pre balkóny, verandy, altánky a terasy. Cenovo dostupné klasické posuvné systémy.
+                    </p>
+                  </div>
+                </AnimatedSection>
+                <AnimatedSection delay={400}>
+                  <div className="p-8 bg-muted/30 border-l-2 border-primary h-full">
+                    <h3 className="text-foreground mb-4">„Teplý" hliník</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Vysoké tepelno- a zvukovoizolačné vlastnosti. Najlepšie riešenie pre vykurované miestnosti.
+                    </p>
+                  </div>
                 </AnimatedSection>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* Framex Features Section */}
+        <section className="section-padding bg-muted/30">
+          <div className="container mx-auto px-4">
+            <AnimatedSection delay={450}>
+              <div className="max-w-4xl mx-auto text-center mb-16">
+                <h2 className="mb-8 text-foreground">Hliníkový profil Framex</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Pracujeme s hliníkovým profilom Framex – kvalitný konštrukčný profil certifikovaný podľa európskych noriem.
+                </p>
+              </div>
+            </AnimatedSection>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+              {framexFeatures.map((feature, index) => (
+                <AnimatedSection key={index} delay={500 + index * 50}>
+                  <div className="text-center">
+                    <h3 className="text-foreground mb-2">{feature.name}</h3>
+                    <p className="text-sm text-muted-foreground">{feature.description}</p>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Framex 38 Section */}
+        <section className="section-padding">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <AnimatedSection delay={550}>
+                <div className="grid md:grid-cols-2 gap-12 items-center">
+                  <div>
+                    <h2 className="mb-6 text-foreground">Framex 38</h2>
+                    <p className="text-sm uppercase tracking-wider text-primary mb-4">Studený hliníkový systém</p>
+                    <p className="text-lg text-muted-foreground leading-relaxed">
+                      Studený hliníkový systém určený pre konštrukcie s nízkymi požiadavkami na tepelnú izoláciu – nevykurované miestnosti, interiérové priečky alebo výklady.
+                    </p>
+                  </div>
+                  <TechnologyGrid technologies={technologies1} />
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* Framex FT 72 Section */}
+        <section className="section-padding bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <AnimatedSection delay={600}>
+                <div className="grid md:grid-cols-2 gap-12 items-center">
+                  <div className="order-2 md:order-1">
+                    <TechnologyGrid technologies={technologies2} />
+                  </div>
+                  <div className="order-1 md:order-2">
+                    <h2 className="mb-6 text-foreground">Framex FT 72</h2>
+                    <p className="text-sm uppercase tracking-wider text-primary mb-4">Teplý hliníkový systém</p>
+                    <p className="text-lg text-muted-foreground leading-relaxed">
+                      Framex FT 72 je spoľahlivý a energeticky účinný teplý hliníkový okenný a dverový systém s vysokou tepelnou a zvukovou izoláciou.
+                    </p>
+                  </div>
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />
