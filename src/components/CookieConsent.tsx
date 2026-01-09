@@ -2,60 +2,16 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { X, Settings, Cookie } from "lucide-react";
 import { Link } from "react-router-dom";
-
-type ConsentState = {
-  necessary: boolean;
-  analytics: boolean;
-  marketing: boolean;
-};
+import { 
+  initConsentMode, 
+  updateConsent, 
+  type ConsentState 
+} from "@/lib/gtm";
 
 const defaultConsent: ConsentState = {
   necessary: true,
   analytics: false,
   marketing: false,
-};
-
-// Initialize Google Consent Mode v2
-const initConsentMode = () => {
-  // @ts-ignore
-  window.dataLayer = window.dataLayer || [];
-  function gtag(...args: any[]) {
-    // @ts-ignore
-    window.dataLayer.push(args);
-  }
-  
-  // Default consent state - deny all except necessary
-  gtag('consent', 'default', {
-    'ad_storage': 'denied',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-    'analytics_storage': 'denied',
-    'functionality_storage': 'granted',
-    'personalization_storage': 'denied',
-    'security_storage': 'granted',
-    'wait_for_update': 500,
-  });
-  
-  gtag('set', 'ads_data_redaction', true);
-  gtag('set', 'url_passthrough', true);
-};
-
-// Update consent based on user preferences
-const updateConsent = (consent: ConsentState) => {
-  // @ts-ignore
-  window.dataLayer = window.dataLayer || [];
-  function gtag(...args: any[]) {
-    // @ts-ignore
-    window.dataLayer.push(args);
-  }
-  
-  gtag('consent', 'update', {
-    'ad_storage': consent.marketing ? 'granted' : 'denied',
-    'ad_user_data': consent.marketing ? 'granted' : 'denied',
-    'ad_personalization': consent.marketing ? 'granted' : 'denied',
-    'analytics_storage': consent.analytics ? 'granted' : 'denied',
-    'personalization_storage': consent.analytics ? 'granted' : 'denied',
-  });
 };
 
 const CookieConsent = () => {
