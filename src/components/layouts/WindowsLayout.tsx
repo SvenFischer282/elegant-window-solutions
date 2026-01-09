@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ContactSidebar from "@/components/ContactSidebar";
 import ProductBreadcrumb from "@/components/product/ProductBreadcrumb";
 import ProductHero from "@/components/product/ProductHero";
 import TechnologyGrid from "@/components/product/TechnologyGrid";
@@ -8,13 +7,6 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 
 const WindowsLayout = () => {
   const title = "Okná";
-
-  const features = [
-    "Plastové okná",
-    "Drevené okná",
-    "Hliníkové okná",
-    "Energeticky úsporné okná",
-  ];
 
   const technologies = [
     {
@@ -76,72 +68,85 @@ const WindowsLayout = () => {
       <Navigation />
 
       <main className="flex-1">
-        <div className="container mx-auto px-4 py-16 md:py-24">
-          <AnimatedSection>
-            <ProductBreadcrumb title={title} />
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
-            <div className="lg:col-span-2 space-y-16">
-              <AnimatedSection delay={100}>
-                <ProductHero image={images[0]} alt={title} />
+        {/* Hero Section */}
+        <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
+          <img
+            src={images[0]}
+            alt={title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16">
+            <div className="container mx-auto">
+              <AnimatedSection>
+                <ProductBreadcrumb title={title} />
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-foreground mt-4">
+                  {title}
+                </h1>
               </AnimatedSection>
+            </div>
+          </div>
+        </section>
 
-              <AnimatedSection delay={200}>
+        {/* Content Section */}
+        <section className="section-padding">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection delay={100}>
                 <div className="space-y-6">
-                  <h2 className="text-foreground">Okná</h2>
-
-                  <div className="space-y-4">
-                    <p className="text-lg text-muted-foreground leading-relaxed">
-                      Plastové okná sú veľmi obľúbené vďaka svojmu modernému
-                      dizajnu a vysokej praktickosti. Nie je ich potrebné natierať
-                      a zároveň pôsobia esteticky a elegantne.
-                    </p>
-                    <p className="text-lg text-muted-foreground leading-relaxed">
-                      Spolupracujeme s výrobcom profilových systémov{" "}
-                      <span className="text-foreground font-medium">WDS</span>
-                      , ktorého produkty prechádzajú dôslednou kontrolou kvality v
-                      každom kroku výroby.
-                    </p>
-                    <p className="text-lg text-muted-foreground leading-relaxed">
-                      Profilové systémy{" "}
-                      <span className="text-foreground font-medium">WDS</span>{" "}
-                      sú vyrábané podľa medzinárodných a slovenských štandardov
-                      kvality, priamo pre klimatické podmienky Slovenska a
-                      slovenské domácnosti.
-                    </p>
-                  </div>
+                  <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+                    Plastové okná sú veľmi obľúbené vďaka svojmu modernému
+                    dizajnu a vysokej praktickosti. Nie je ich potrebné natierať
+                    a zároveň pôsobia esteticky a elegantne.
+                  </p>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Spolupracujeme s výrobcom profilových systémov{" "}
+                    <span className="text-foreground font-medium">WDS</span>
+                    , ktorého produkty prechádzajú dôslednou kontrolou kvality v
+                    každom kroku výroby.
+                  </p>
                 </div>
               </AnimatedSection>
+            </div>
+          </div>
+        </section>
 
-              <AnimatedSection delay={300}>
-                <TechnologyGrid technologies={technologies} />
-              </AnimatedSection>
+        {/* Technology Grid Section */}
+        <section className="section-padding bg-muted/30">
+          <div className="container mx-auto px-4">
+            <AnimatedSection delay={200}>
+              <h2 className="text-center mb-16 text-foreground">
+                Profilové systémy
+              </h2>
+            </AnimatedSection>
+            <AnimatedSection delay={300}>
+              <TechnologyGrid technologies={technologies} />
+            </AnimatedSection>
+          </div>
+        </section>
 
+        {/* Specifications Section */}
+        <section className="section-padding">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
               <AnimatedSection delay={400}>
-                <div className="space-y-8">
-                  <h3 className="text-foreground">Technické špecifikácie</h3>
-                  {technologies.map((tech, index) => (
-                    <div key={index} className="space-y-2">
-                      <h4 className="text-foreground">{tech.name}</h4>
+                <h2 className="mb-12 text-foreground">Technické špecifikácie</h2>
+              </AnimatedSection>
+              <div className="space-y-12">
+                {technologies.map((tech, index) => (
+                  <AnimatedSection key={index} delay={450 + index * 50}>
+                    <div className="border-b border-border pb-8 last:border-0">
+                      <h3 className="text-foreground mb-3">{tech.name}</h3>
                       <p className="text-muted-foreground leading-relaxed">
                         {tech.descriptionDetailed}
                       </p>
                     </div>
-                  ))}
-                </div>
-              </AnimatedSection>
-            </div>
-
-            <div className="lg:col-span-1">
-              <div className="sticky top-24">
-                <AnimatedSection delay={200} direction="right">
-                  <ContactSidebar />
-                </AnimatedSection>
+                  </AnimatedSection>
+                ))}
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </main>
 
       <Footer />
