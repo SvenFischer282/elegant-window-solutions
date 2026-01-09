@@ -44,19 +44,26 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-background/20 mt-12 pt-8 text-center text-background/50 text-sm">
-          <p>&copy; {new Date().getFullYear()} ARGO SNV</p>
-          <p className="mt-2">
-            Created by{" "}
-            <a 
-              href="https://svenfischer.sk" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-background/70 hover:text-background transition-colors"
-            >
-              Sven Fischer
-            </a>
-          </p>
+        <div className="border-t border-background/20 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-background/50 text-sm">
+            <p>&copy; {new Date().getFullYear()} ARGO SNV</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a href="/privacy-policy" className="hover:text-background transition-colors">Ochrana osobných údajov</a>
+              <a href="/cookie-policy" className="hover:text-background transition-colors">Cookies</a>
+              <a href="/terms-conditions" className="hover:text-background transition-colors">Obchodné podmienky</a>
+            </div>
+            <p>
+              Created by{" "}
+              <a 
+                href="https://svenfischer.sk" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-background/70 hover:text-background transition-colors"
+              >
+                Sven Fischer
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
