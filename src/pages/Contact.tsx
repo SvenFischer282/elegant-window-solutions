@@ -8,6 +8,8 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Link } from "react-router-dom";
 import {
   Form,
   FormControl,
@@ -40,6 +42,9 @@ const contactSchema = z.object({
     .trim()
     .min(1, "Správa je povinná")
     .max(1000, "Správa je príliš dlhá"),
+  gdprConsent: z.boolean().refine((val) => val === true, {
+    message: "Súhlas so spracovaním osobných údajov je povinný",
+  }),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -55,6 +60,7 @@ const Contact = () => {
       email: "",
       phone: "",
       message: "",
+      gdprConsent: false,
     },
   });
 
@@ -63,8 +69,6 @@ const Contact = () => {
 
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    console.log("Contact form data:", data);
 
     toast({
       title: "Správa odoslaná!",
@@ -179,6 +183,37 @@ const Contact = () => {
                             />
                           </FormControl>
                           <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="gdprConsent"
+                      render={({ field }) => (
+                        <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                          <FormControl>
+                            <Checkbox
+                              checked={field.value}
+                              onCheckedChange={field.onChange}
+                              className="mt-1"
+                            />
+                          </FormControl>
+                          <div className="space-y-1 leading-none">
+                            <FormLabel className="text-sm text-muted-foreground font-normal leading-relaxed cursor-pointer">
+                              Odoslaním formulára súhlasím so spracovaním mojich osobných údajov za účelom 
+                              spracovania dopytu v súlade so{" "}
+                              <Link
+                                to="/privacy-policy"
+                                className="text-foreground hover:underline"
+                                target="_blank"
+                              >
+                                Zásadami ochrany osobných údajov
+                              </Link>
+                              . *
+                            </FormLabel>
+                            <FormMessage />
+                          </div>
                         </FormItem>
                       )}
                     />
