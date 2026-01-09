@@ -49,21 +49,23 @@ const AluminumLayout = () => {
       <Navigation />
 
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="relative h-[60vh] md:h-[70vh]">
+        {/* Hero Section - Full Screen */}
+        <section className="relative" style={{ height: "calc(100vh - 4rem)" }}>
           <img
             src={images[0]}
             alt={title}
-            className="w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-          <div className="absolute inset-0 flex items-end">
-            <div className="container mx-auto px-4 pb-12 md:pb-16">
+          <div className="absolute inset-0 bg-foreground/40" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center text-background px-4">
               <AnimatedSection>
-                <ProductBreadcrumb title={title} />
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mt-4">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
                   Hliníkové konštrukcie
                 </h1>
+                <p className="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto">
+                  Ľahké a odolné riešenia pre moderné stavby
+                </p>
               </AnimatedSection>
             </div>
           </div>
