@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import ProductBreadcrumb from "@/components/product/ProductBreadcrumb";
 import TechnologyGrid from "@/components/product/TechnologyGrid";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import Advantages from "../Advantages";
 
 const SlidingSystemsLayout = () => {
   const title = "Posuvné systémy";
@@ -80,13 +79,10 @@ const SlidingSystemsLayout = () => {
               <AnimatedSection delay={100}>
                 <div className="space-y-6">
                   <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-                    Posuvné systémy predstavujú estetický a zároveň mimoriadne
-                    praktický spôsob zasklenia budov a miestností.
+                    Posuvné systémy predstavujú estetický a zároveň mimoriadne praktický spôsob zasklenia budov a miestností.
                   </p>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    Tieto konštrukcie sa ľahko otvárajú a zatvárajú, pričom si
-                    zachovávajú relatívne nízku hmotnosť aj pri rozsiahlej
-                    zasklenej ploche.
+                    Tieto konštrukcie sa ľahko otvárajú a zatvárajú, pričom si zachovávajú relatívne nízku hmotnosť aj pri rozsiahlej zasklenej ploche.
                   </p>
                 </div>
               </AnimatedSection>
@@ -95,7 +91,25 @@ const SlidingSystemsLayout = () => {
         </section>
 
         {/* Advantages Section */}
-        <Advantages advantages={advantages} title={"Hlavné výhody"} />
+        <section className="section-padding bg-muted/30">
+          <div className="container mx-auto px-4">
+            <AnimatedSection delay={200}>
+              <h2 className="text-center mb-16 text-foreground">
+                Hlavné výhody
+              </h2>
+            </AnimatedSection>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+              {advantages.map((item, index) => (
+                <AnimatedSection key={index} delay={250 + index * 50}>
+                  <div className="text-center">
+                    <h3 className="text-foreground mb-2">{item.name}</h3>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Systems Comparison */}
         <section className="section-padding">
@@ -183,13 +197,9 @@ const SlidingSystemsLayout = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <AnimatedSection delay={550}>
-                <h2 className="mb-8 text-foreground">
-                  Hliníkové posuvné systémy
-                </h2>
+                <h2 className="mb-8 text-foreground">Hliníkové posuvné systémy</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Hliníkové posuvné systémy sú estetickým a pohodlným riešením
-                  pre zasklenie. Vyznačujú sa mimoriadnou ľahkosťou, jednoduchým
-                  používaním a dobrou zvukovou izoláciou.
+                  Hliníkové posuvné systémy sú estetickým a pohodlným riešením pre zasklenie. Vyznačujú sa mimoriadnou ľahkosťou, jednoduchým používaním a dobrou zvukovou izoláciou.
                 </p>
               </AnimatedSection>
             </div>

@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import ProductBreadcrumb from "@/components/product/ProductBreadcrumb";
 import TechnologyGrid from "@/components/product/TechnologyGrid";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import Advantages from "../Advantages";
 
 const AluminumLayout = () => {
   const title = "Hliník";
@@ -12,11 +11,11 @@ const AluminumLayout = () => {
     "https://vesnyanka.com.ua/wp-content/uploads/2025/03/DALL%C2%B7E-2025-03-31-21.43.31-A-modern-aluminum-and-glass-door-designed-for-contemporary-homes-and-commercial-spaces.-The-door-features-a-sleek-minimalistic-frame-with-a-large-gla.webp",
   ];
 
-  const advantages = [
-    { name: "Fasády", description: "" },
-    { name: "Kancelárske priečky", description: "" },
-    { name: "Okná", description: "" },
-    { name: "Dvere a iné hliníkové výrobky", description: "" },
+  const products = [
+    "Fasády",
+    "Kancelárske priečky",
+    "Okná",
+    "Dvere a iné hliníkové výrobky",
   ];
 
   const framexFeatures = [
@@ -77,9 +76,7 @@ const AluminumLayout = () => {
         </section>
 
         {/* Products Section */}
-
-        <Advantages advantages={advantages} title={"Náš sortiment"} />
-        {/* <section className="section-padding bg-muted/30">
+        <section className="section-padding bg-muted/30">
           <div className="container mx-auto px-4">
             <AnimatedSection delay={200}>
               <h2 className="text-center mb-16 text-foreground">
@@ -96,7 +93,7 @@ const AluminumLayout = () => {
               ))}
             </div>
           </div>
-        </section> */}
+        </section>
 
         {/* Cold vs Warm Section */}
         <section className="section-padding">
@@ -209,7 +206,7 @@ const AluminumLayout = () => {
                     <p className="text-lg text-muted-foreground leading-relaxed">
                       Framex FT 72 je spoľahlivý a energeticky účinný teplý
                       hliníkový okenný a dverový systém s vysokou tepelnou a
-                      zvukovou izoláciou. Montážna hĺbka 72 mm.
+                      zvukovou izoláciou.
                     </p>
                   </div>
                 </div>
