@@ -180,25 +180,7 @@ const Production = () => {
           </section>
         </AnimatedSection>
 
-        {/* YouTube Video Section */}
-        <AnimatedSection>
-          <section className="section-padding bg-muted/30">
-            <div className="container mx-auto px-4">
-              <h2 className="text-center mb-12 text-foreground">
-                Pozrite si našu výrobu
-              </h2>
-              <div className="aspect-video w-full max-w-4xl mx-auto overflow-hidden">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/x2H0ciFu61Q"
-                  title="Výroba okien"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-            </div>
-          </section>
-        </AnimatedSection>
+       
       </main>
 
       <Footer />

@@ -18,7 +18,8 @@ import { useToast } from "@/hooks/use-toast";
 import HeroCarousel from "@/components/HeroCarousel";
 import OurProducts from "@/components/OurProducts";
 
-const STORAGE_URL = "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna";
+const STORAGE_URL =
+  "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -34,7 +35,8 @@ const ContactForm = () => {
     if (!gdprConsent) {
       toast({
         title: "Súhlas je povinný",
-        description: "Pre odoslanie formulára musíte súhlasiť so spracovaním osobných údajov.",
+        description:
+          "Pre odoslanie formulára musíte súhlasiť so spracovaním osobných údajov.",
         variant: "destructive",
       });
       return;
@@ -127,8 +129,8 @@ const Index = () => {
                     Aké typy okien ponúkate?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pt-4 text-base leading-relaxed">
-                    Ponúkame širokú škálu okien vrátane plastových, hliníkových a
-                    drevených okien. Každý typ má svoje špecifické výhody a je
+                    Ponúkame širokú škálu okien vrátane plastových, hliníkových
+                    a drevených okien. Každý typ má svoje špecifické výhody a je
                     vhodný pre rôzne typy budov a klimatické podmienky.
                   </AccordionContent>
                 </AccordionItem>
@@ -155,10 +157,10 @@ const Index = () => {
                     Ako dlho trvá montáž?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pt-4 text-base leading-relaxed">
-                    Montáž štandardných okien alebo dverí trvá zvyčajne 1-2 dni v
-                    závislosti od počtu kusov. Väčšie projekty ako fasády alebo
-                    garážové brány môžu trvať dlhšie. Presný časový rámec vám
-                    poskytneme pri obhliadke.
+                    Montáž štandardných okien alebo dverí trvá zvyčajne 1-2 dni
+                    v závislosti od počtu kusov. Väčšie projekty ako fasády
+                    alebo garážové brány môžu trvať dlhšie. Presný časový rámec
+                    vám poskytneme pri obhliadke.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -171,8 +173,8 @@ const Index = () => {
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pt-4 text-base leading-relaxed">
                     Áno, ponúkame bezplatnú obhliadku a vypracovanie cenovej
-                    ponuky. Náš technik príde na miesto, vykoná potrebné merania a
-                    poradí vám s výberom najvhodnejšieho riešenia pre vaše
+                    ponuky. Náš technik príde na miesto, vykoná potrebné merania
+                    a poradí vám s výberom najvhodnejšieho riešenia pre vaše
                     potreby.
                   </AccordionContent>
                 </AccordionItem>
@@ -187,8 +189,8 @@ const Index = () => {
                   <AccordionContent className="text-muted-foreground pt-4 text-base leading-relaxed">
                     Všetky naše produkty spĺňajú európske normy kvality a
                     bezpečnosti vrátane STN EN 14351-1, ISO 9001 a ďalších
-                    relevantných certifikácií. Detailné informácie o certifikátoch
-                    nájdete na stránkach jednotlivých produktov.
+                    relevantných certifikácií. Detailné informácie o
+                    certifikátoch nájdete na stránkach jednotlivých produktov.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -220,14 +222,6 @@ const Index = () => {
                 Kontaktujte nás
               </h2>
               <div className="grid md:grid-cols-2 gap-16 md:gap-24">
-                {/* Contact Form */}
-                <AnimatedSection delay={100} direction="left">
-                  <div>
-                    <h3 className="mb-8 text-foreground">Napíšte nám</h3>
-                    <ContactForm />
-                  </div>
-                </AnimatedSection>
-
                 {/* Contact Information */}
                 <AnimatedSection delay={200} direction="right">
                   <div>
@@ -240,7 +234,9 @@ const Index = () => {
                           strokeWidth={1.5}
                         />
                         <div>
-                          <p className="text-sm uppercase tracking-wider text-muted-foreground mb-1">Adresa</p>
+                          <p className="text-sm uppercase tracking-wider text-muted-foreground mb-1">
+                            Adresa
+                          </p>
                           <p className="text-foreground">
                             Slovenská 256, 05 321 Markušovce
                           </p>
@@ -253,7 +249,9 @@ const Index = () => {
                           strokeWidth={1.5}
                         />
                         <div>
-                          <p className="text-sm uppercase tracking-wider text-muted-foreground mb-1">Email</p>
+                          <p className="text-sm uppercase tracking-wider text-muted-foreground mb-1">
+                            Email
+                          </p>
                           <a
                             href="mailto:info@company.sk"
                             className="text-foreground hover:text-primary transition-colors"
@@ -269,7 +267,9 @@ const Index = () => {
                           strokeWidth={1.5}
                         />
                         <div>
-                          <p className="text-sm uppercase tracking-wider text-muted-foreground mb-1">Telefón</p>
+                          <p className="text-sm uppercase tracking-wider text-muted-foreground mb-1">
+                            Telefón
+                          </p>
                           <a
                             href="tel:+421903468472"
                             className="text-foreground hover:text-primary transition-colors"
@@ -279,6 +279,13 @@ const Index = () => {
                         </div>
                       </div>
                     </div>
+                  </div>
+                </AnimatedSection>
+                {/* Contact Form */}
+                <AnimatedSection delay={100} direction="left">
+                  <div>
+                    <h3 className="mb-8 text-foreground">Napíšte nám</h3>
+                    <ContactForm />
                   </div>
                 </AnimatedSection>
               </div>
