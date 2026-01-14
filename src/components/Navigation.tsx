@@ -37,16 +37,21 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-3 sm:gap-4">
-            <Link to="/" className="text-xl sm:text-2xl font-bold tracking-tight">
+            <Link
+              to="/"
+              className="text-xl sm:text-2xl font-bold tracking-tight"
+            >
               ARGO SNV
             </Link>
-            <a 
-              href="tel:+421903468472" 
+            <a
+              href="tel:+421903468472"
               className="flex items-center gap-1.5 text-primary-foreground/90 hover:text-primary-foreground transition-colors text-xs sm:text-sm"
             >
               <Phone className="w-3 h-3 sm:w-4 sm:h-4" strokeWidth={1.5} />
               <span className="hidden xs:inline">0903 468 472</span>
-              <span className="xs:hidden">0903...</span>
+              <span className="xs:hidden text-base lg:text-xl ">
+                0903 468 472
+              </span>
             </a>
           </div>
           {/* Desktop Menu */}
