@@ -13,16 +13,13 @@ const TechnologyGrid = ({ technologies }: TechnologyGridProps) => {
     <div className="space-y-8">
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
         {technologies.map((tech, index) => (
-          <div
-            key={index}
-            className="group text-center"
-          >
-            <div className="mb-4 flex items-center justify-center h-48 bg-muted/30">
+          <div key={index} className="group text-center">
+            <div className="mb-4 flex items-center justify-center h-56 bg-muted/30">
               <img
                 src={tech.image}
                 alt={tech.name}
                 loading="lazy"
-                className="max-h-40 object-contain transition-transform duration-500 group-hover:scale-105"
+                className="max-h-56 object-contain transition-transform duration-500 group-hover:scale-105"
               />
             </div>
             <h4 className="font-normal text-foreground text-base">

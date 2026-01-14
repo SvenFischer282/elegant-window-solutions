@@ -112,7 +112,7 @@ const Index = () => {
         <OurProducts />
       </AnimatedSection>
 
-      {/* FAQ Section */}
+      {/* FAQ Section
       <AnimatedSection>
         <section className="section-padding bg-background">
           <div className="container mx-auto px-4">
@@ -211,7 +211,7 @@ const Index = () => {
             </div>
           </div>
         </section>
-      </AnimatedSection>
+      </AnimatedSection> */}
 
       {/* Contact Section */}
       <AnimatedSection>
