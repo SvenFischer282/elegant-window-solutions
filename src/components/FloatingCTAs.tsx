@@ -28,15 +28,13 @@ const FloatingCTAs = () => {
   const WoodIcon = () => (
     <svg 
       xmlns="http://www.w3.org/2000/svg" 
-      width="20" 
-      height="20" 
       viewBox="0 0 24 24" 
       fill="none" 
       stroke="currentColor" 
       strokeWidth="1.5" 
       strokeLinecap="round" 
       strokeLinejoin="round"
-      className="shrink-0"
+      className="w-4 h-4 sm:w-5 sm:h-5 shrink-0"
     >
       <path d="M2 12c0-3.5 2.5-6 6-6h8c3.5 0 6 2.5 6 6s-2.5 6-6 6H8c-3.5 0-6-2.5-6-6z" />
       <circle cx="8" cy="12" r="2" />
@@ -53,21 +51,21 @@ const FloatingCTAs = () => {
           animateLeft ? 'opacity-100' : 'opacity-0 translate-y-8'
         }`}
         style={{
-          left: leftExpanded ? '16px' : '0',
+          left: leftExpanded ? '8px' : '0',
           transform: animateLeft 
             ? `translateX(${leftExpanded ? '0' : '-100%'})` 
             : 'translateY(32px)'
         }}
       >
         <div className="flex items-stretch">
-          <a
+      <a
             href="https://kotlynapelety.sk"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 bg-primary text-primary-foreground pl-5 pr-4 py-3 shadow-sm transition-all duration-300 hover:bg-primary/90"
+            className="flex items-center gap-2 sm:gap-3 bg-primary text-primary-foreground pl-3 sm:pl-5 pr-2 sm:pr-4 py-2 sm:py-3 shadow-sm transition-all duration-300 hover:bg-primary/90"
           >
-            <Flame className="w-5 h-5 shrink-0 opacity-80" strokeWidth={1.5} />
-            <span className="font-light text-sm tracking-wide whitespace-nowrap">
+            <Flame className="w-4 h-4 sm:w-5 sm:h-5 shrink-0 opacity-80" strokeWidth={1.5} />
+            <span className="font-light text-xs sm:text-sm tracking-wide whitespace-nowrap">
               Kotly na pelety
             </span>
           </a>
@@ -97,7 +95,7 @@ const FloatingCTAs = () => {
           animateRight ? 'opacity-100' : 'opacity-0 translate-y-8'
         }`}
         style={{
-          right: rightExpanded ? '16px' : '0',
+          right: rightExpanded ? '8px' : '0',
           transform: animateRight 
             ? `translateX(${rightExpanded ? '0' : '100%'})` 
             : 'translateY(32px)'
@@ -115,10 +113,10 @@ const FloatingCTAs = () => {
             href="https://briketyruf.sk"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 bg-foreground text-background pl-4 pr-5 py-3 shadow-sm transition-all duration-300 hover:bg-foreground/90"
+            className="flex items-center gap-2 sm:gap-3 bg-foreground text-background pl-2 sm:pl-4 pr-3 sm:pr-5 py-2 sm:py-3 shadow-sm transition-all duration-300 hover:bg-foreground/90"
           >
             <WoodIcon />
-            <span className="font-light text-sm tracking-wide whitespace-nowrap">
+            <span className="font-light text-xs sm:text-sm tracking-wide whitespace-nowrap">
               Brikety RUF
             </span>
           </a>
