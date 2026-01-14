@@ -77,17 +77,17 @@ const FloatingCTAs = () => {
             className="bg-primary/90 text-primary-foreground px-1.5 shadow-sm transition-all duration-300 hover:bg-primary/80 flex items-center"
             aria-label={leftExpanded ? "Skryť" : "Zobraziť"}
           >
-            <ChevronLeft className="w-4 h-4 opacity-60" strokeWidth={1.5} />
+            <ChevronLeft className="w-3 h-3 sm:w-4 sm:h-4 opacity-60" strokeWidth={1.5} />
           </button>
         </div>
         {/* Collapsed state toggle */}
         {!leftExpanded && (
           <button
             onClick={toggleLeft}
-            className="absolute right-0 top-0 translate-x-full bg-primary text-primary-foreground p-3 shadow-sm transition-all duration-300 hover:bg-primary/90"
+            className="absolute right-0 top-0 translate-x-full bg-primary text-primary-foreground p-2 sm:p-3 shadow-sm transition-all duration-300 hover:bg-primary/90"
             aria-label="Zobraziť"
           >
-            <ChevronRight className="w-5 h-5 opacity-80" strokeWidth={1.5} />
+            <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 opacity-80" strokeWidth={1.5} />
           </button>
         )}
       </div>
@@ -110,7 +110,7 @@ const FloatingCTAs = () => {
             className="bg-foreground/90 text-background px-1.5 shadow-sm transition-all duration-300 hover:bg-foreground/80 flex items-center"
             aria-label={rightExpanded ? "Skryť" : "Zobraziť"}
           >
-            <ChevronRight className="w-4 h-4 opacity-60" strokeWidth={1.5} />
+            <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 opacity-60" strokeWidth={1.5} />
           </button>
           <a
             href="https://briketyruf.sk"
@@ -119,7 +119,7 @@ const FloatingCTAs = () => {
             className="flex items-center gap-2 sm:gap-3 bg-foreground text-background pl-2 sm:pl-4 pr-3 sm:pr-5 py-2 sm:py-3 shadow-sm transition-all duration-300 hover:bg-foreground/90"
           >
             <FlameKindling
-              className="w-5 h-5 shrink-0 opacity-80"
+              className="w-4 h-4 sm:w-5 sm:h-5 shrink-0 opacity-80"
               strokeWidth={1.5}
             />
             <span className="font-light text-xs sm:text-sm tracking-wide whitespace-nowrap">
@@ -131,10 +131,10 @@ const FloatingCTAs = () => {
         {!rightExpanded && (
           <button
             onClick={toggleRight}
-            className="absolute left-0 top-0 -translate-x-full bg-foreground text-background p-3 shadow-sm transition-all duration-300 hover:bg-foreground/90"
+            className="absolute left-0 top-0 -translate-x-full bg-foreground text-background p-2 sm:p-3 shadow-sm transition-all duration-300 hover:bg-foreground/90"
             aria-label="Zobraziť"
           >
-            <ChevronLeft className="w-5 h-5 opacity-80" strokeWidth={1.5} />
+            <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 opacity-80" strokeWidth={1.5} />
           </button>
         )}
       </div>
