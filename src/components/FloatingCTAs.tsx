@@ -17,30 +17,42 @@ const isDismissExpired = (key: string): boolean => {
 const FloatingCTAs = () => {
   const [showLeft, setShowLeft] = useState(false);
   const [showRight, setShowRight] = useState(false);
+  const [animateLeft, setAnimateLeft] = useState(false);
+  const [animateRight, setAnimateRight] = useState(false);
 
   useEffect(() => {
     if (isDismissExpired('cta-kotly-dismissed')) {
       localStorage.removeItem('cta-kotly-dismissed');
       setShowLeft(true);
+      // Trigger animation after mount
+      setTimeout(() => setAnimateLeft(true), 100);
     }
     if (isDismissExpired('cta-brikety-dismissed')) {
       localStorage.removeItem('cta-brikety-dismissed');
       setShowRight(true);
+      // Trigger animation with slight delay for stagger effect
+      setTimeout(() => setAnimateRight(true), 200);
     }
   }, []);
 
   const dismissLeft = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    localStorage.setItem('cta-kotly-dismissed', Date.now().toString());
-    setShowLeft(false);
+    setAnimateLeft(false);
+    setTimeout(() => {
+      localStorage.setItem('cta-kotly-dismissed', Date.now().toString());
+      setShowLeft(false);
+    }, 300);
   };
 
   const dismissRight = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    localStorage.setItem('cta-brikety-dismissed', Date.now().toString());
-    setShowRight(false);
+    setAnimateRight(false);
+    setTimeout(() => {
+      localStorage.setItem('cta-brikety-dismissed', Date.now().toString());
+      setShowRight(false);
+    }, 300);
   };
 
   // Custom wood/log icon
@@ -72,7 +84,11 @@ const FloatingCTAs = () => {
           href="https://kotlynapelety.sk"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-4 left-4 z-50 flex items-center gap-3 bg-primary text-primary-foreground px-5 py-3 shadow-sm transition-all duration-300 hover:bg-primary/90 hover:-translate-y-0.5 group max-w-[calc(50vw-24px)] md:max-w-none border border-primary/20"
+          className={`fixed bottom-4 left-4 z-50 flex items-center gap-3 bg-primary text-primary-foreground px-5 py-3 shadow-sm transition-all duration-300 hover:bg-primary/90 hover:-translate-y-0.5 group max-w-[calc(50vw-24px)] md:max-w-none border border-primary/20 ${
+            animateLeft 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-8'
+          }`}
         >
           <Flame className="w-5 h-5 shrink-0 opacity-80" strokeWidth={1.5} />
           <span className="font-light text-sm tracking-wide whitespace-nowrap overflow-hidden text-ellipsis">
@@ -94,7 +110,11 @@ const FloatingCTAs = () => {
           href="https://briketyruf.sk"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-4 right-4 z-50 flex items-center gap-3 bg-foreground text-background px-5 py-3 shadow-sm transition-all duration-300 hover:bg-foreground/90 hover:-translate-y-0.5 group max-w-[calc(50vw-24px)] md:max-w-none"
+          className={`fixed bottom-4 right-4 z-50 flex items-center gap-3 bg-foreground text-background px-5 py-3 shadow-sm transition-all duration-300 hover:bg-foreground/90 hover:-translate-y-0.5 group max-w-[calc(50vw-24px)] md:max-w-none ${
+            animateRight 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-8'
+          }`}
         >
           <WoodIcon />
           <span className="font-light text-sm tracking-wide whitespace-nowrap overflow-hidden text-ellipsis">
