@@ -63,7 +63,30 @@ const FAQ = () => {
                   </AccordionContent>
                 </AccordionItem>
 
-               
+                <AccordionItem
+                  value="item-4"
+                  className="border-b border-border py-6"
+                >
+                  <AccordionTrigger className="text-left hover:no-underline text-lg font-normal">
+                    Prečo si vybrať dvere z PVC profilu?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pt-4 text-base leading-relaxed">
+                    <p className="mb-3">
+                      PVC konštrukcie sú osvedčené časom a vyskúšané prakticky každým. 
+                      Kovovo-plastové dvere majú celý rad výhod:
+                    </p>
+                    <ul className="list-disc list-inside space-y-1.5">
+                      <li>Ochrana proti hluku, prachu a chladu</li>
+                      <li>Vysoká pevnosť</li>
+                      <li>Odolnosť voči rozličným poveternostným podmienkam</li>
+                      <li>Tepelná izolácia</li>
+                      <li>Vlastnosti proti vlámaniu</li>
+                      <li>Estetický vzhľad</li>
+                      <li>Dobrá cena</li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+
                 <AccordionItem
                   value="item-5"
                   className="border-b border-border py-6"
