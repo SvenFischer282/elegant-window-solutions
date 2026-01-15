@@ -63,21 +63,7 @@ const FAQ = () => {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem
-                  value="item-4"
-                  className="border-b border-border py-6"
-                >
-                  <AccordionTrigger className="text-left hover:no-underline text-lg font-normal">
-                    Poskytujete bezplatnú obhliadku a cenový odhad?
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pt-4 text-base leading-relaxed">
-                    Áno, ponúkame bezplatnú obhliadku a vypracovanie cenovej
-                    ponuky. Náš technik príde na miesto, vykoná potrebné merania
-                    a poradí vám s výberom najvhodnejšieho riešenia pre vaše
-                    potreby.
-                  </AccordionContent>
-                </AccordionItem>
-
+               
                 <AccordionItem
                   value="item-5"
                   className="border-b border-border py-6"
@@ -90,20 +76,6 @@ const FAQ = () => {
                     bezpečnosti vrátane STN EN 14351-1, ISO 9001 a ďalších
                     relevantných certifikácií. Detailné informácie o
                     certifikátoch nájdete na stránkach jednotlivých produktov.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem
-                  value="item-6"
-                  className="border-b border-border py-6"
-                >
-                  <AccordionTrigger className="text-left hover:no-underline text-lg font-normal">
-                    Ponúkate financovanie alebo platbu na splátky?
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pt-4 text-base leading-relaxed">
-                    Áno, spolupracujeme s viacerými finančnými inštitúciami a
-                    ponúkame rôzne možnosti financovania vrátane splátok s
-                    výhodným úročením. Kontaktujte nás pre viac informácií.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
