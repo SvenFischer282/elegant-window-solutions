@@ -3,12 +3,13 @@ import Footer from "@/components/Footer";
 import ProductBreadcrumb from "@/components/product/ProductBreadcrumb";
 import TechnologyGrid from "@/components/product/TechnologyGrid";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import {STORAGE_URL} from "@/lib/constants";
 
 const AluminumLayout = () => {
   const title = "Hliník";
 
   const images = [
-    "https://vesnyanka.com.ua/wp-content/uploads/2025/03/DALL%C2%B7E-2025-03-31-21.43.31-A-modern-aluminum-and-glass-door-designed-for-contemporary-homes-and-commercial-spaces.-The-door-features-a-sleek-minimalistic-frame-with-a-large-gla.webp",
+    `${STORAGE_URL}/hlinik.webp`,
   ];
 
   const products = [
@@ -42,6 +43,8 @@ const AluminumLayout = () => {
             src={images[0]}
             alt={title}
             className="absolute inset-0 w-full h-full object-cover"
+            style={{ imageRendering: "auto" }}
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-foreground/40" />
           <div className="absolute inset-0 flex items-center justify-center">

@@ -85,7 +85,7 @@ const HeroCarousel = ({
                 <img
                   src={image.src}
                   alt={image.alt}
-                  loading="lazy"
+                  fetchPriority={index === 0 ? "high" : "auto"}
                   className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                 />
                 <div className="absolute inset-0 bg-foreground/40 pointer-events-none" />

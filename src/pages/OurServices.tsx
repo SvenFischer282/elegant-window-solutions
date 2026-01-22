@@ -4,8 +4,7 @@ import Footer from "@/components/Footer";
 import HeroCarousel from "@/components/HeroCarousel";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
-const STORAGE_URL =
-  "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna";
+import { STORAGE_URL } from "@/lib/constants";
 
 const carouselImages = [
   {

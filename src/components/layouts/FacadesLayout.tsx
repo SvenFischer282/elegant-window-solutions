@@ -2,12 +2,13 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ProductBreadcrumb from "@/components/product/ProductBreadcrumb";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { STORAGE_URL } from "@/lib/constants";
 
 const FacadesLayout = () => {
   const title = "Fasády";
 
   const images = [
-    "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/luxury-holiday-home.jpg",
+    `${STORAGE_URL}/fasady.webp`,
   ];
 
   const benefits = [
@@ -28,6 +29,7 @@ const FacadesLayout = () => {
             src={images[0]}
             alt={title}
             className="absolute inset-0 w-full h-full object-cover"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-foreground/40" />
           <div className="absolute inset-0 flex items-center justify-center">

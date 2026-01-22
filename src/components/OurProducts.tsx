@@ -1,19 +1,19 @@
 import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
+import { STORAGE_URL } from "@/lib/constants";
+
 const OurProducts = () => {
   const products = [
     {
       title: "Okná",
       path: "/windows",
-      image:
-        "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/okno.jpg",
+      image: `${STORAGE_URL}/okno.jpg`,
     },
     {
       title: "Dvere",
       path: "/doors",
-      image:
-        "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/dvere.jpg",
+      image: `${STORAGE_URL}/dvere.jpg`,
     },
     {
       title: "Posuvné systémy",
@@ -24,14 +24,12 @@ const OurProducts = () => {
     {
       title: "Hliník",
       path: "/aluminum",
-      image:
-        "https://vesnyanka.com.ua/wp-content/uploads/2025/03/DALL%C2%B7E-2025-03-31-21.43.31-A-modern-aluminum-and-glass-door-designed-for-contemporary-homes-and-commercial-spaces.-The-door-features-a-sleek-minimalistic-frame-with-a-large-gla.webp",
+      image: `${STORAGE_URL}/hlinik.webp`,
     },
     {
       title: "Fasády",
       path: "/facades",
-      image:
-        "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/luxury-holiday-home.jpg",
+      image: `${STORAGE_URL}/fasady.webp`,
     },
   ];
 

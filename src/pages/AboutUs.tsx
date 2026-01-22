@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
-const STORAGE_URL = "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna";
+import { STORAGE_URL } from "@/lib/constants";
 
 const AboutUs = () => {
   const features = [

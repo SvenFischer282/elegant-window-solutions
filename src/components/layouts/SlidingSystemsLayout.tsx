@@ -56,6 +56,7 @@ const SlidingSystemsLayout = () => {
             src={images[0]}
             alt={title}
             className="absolute inset-0 w-full h-full object-cover"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-foreground/40" />
           <div className="absolute inset-0 flex items-center justify-center">

@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import ProductBreadcrumb from "@/components/product/ProductBreadcrumb";
 import TechnologyGrid from "@/components/product/TechnologyGrid";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { STORAGE_URL } from "@/lib/constants";
 
 const DoorsLayout = () => {
   const title = "Dvere";
@@ -12,24 +13,24 @@ const DoorsLayout = () => {
       name: "WDS 60mm",
       description: "Montážna šírka - 60mm",
       image:
-        "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/wds_60mm.png",
+      `${STORAGE_URL}/wds_60mm.png`,
     },
     {
       name: "WDS 70mm",
       description: "Montážna šírka - 70mm",
       image:
-        "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/wds_70mm.png",
+        `${STORAGE_URL}/wds_70mm.png`,
     },
     {
       name: "WDS 76mm",
       description: "Montážna šírka - 76mm",
       image:
-        "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/wds_76mm.png",
+        `${STORAGE_URL}/wds_76mm.png`,
     },
   ];
 
   const images = [
-    "https://dgvswatqmbvaqfznixyg.supabase.co/storage/v1/object/public/okna/dvere.jpg",
+    `${STORAGE_URL}/dvere.webp`,
   ];
 
   const doorTypes = [
@@ -62,6 +63,7 @@ const DoorsLayout = () => {
             src={images[0]}
             alt={title}
             className="absolute inset-0 w-full h-full object-cover"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-foreground/40" />
           <div className="absolute inset-0 flex items-center justify-center">
